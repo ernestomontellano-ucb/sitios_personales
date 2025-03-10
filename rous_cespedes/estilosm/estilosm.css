@@ -1,0 +1,20 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+
+}
+
+body{
+    background-color: rgb(245, 217, 255);
+}
+
+.encabezado{
+    background-color: rgb(115, 0, 153);
+    display: flex;
+    font-size: 20pt;
+    border-radius: 20pt;
+    border-bottom: 20px;
+    padding: 20px;
+    color: rgb(249, 230, 255);
+}
