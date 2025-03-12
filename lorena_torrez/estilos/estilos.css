@@ -1,20 +1,86 @@
-header {
-    padding: 20px;
-    display: flex;
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
 }
-header h1{}
-header nav{}
-header nav ul{}
-header nav ul li{}
-header nav ul li a{}
-header nav ul li a:hover{}
 
-.morado{
-    background: purple;
+body{
+    font-family: 'Playpen Sans', cursive;
+    font-weight: 200;
+    background: linear-gradient(to top, #663952 0%, #45233C 21%, #1F0C29 75%, #0A0614 100%);
+    background-attachment: fixed;
 }
-.azul{
-    background: blue;
+
+.container{
+    width: auto;
+    margin: 0px auto;
+    background: #280B31;
 }
-.amarillo{
-    background: yellow;
+
+header{
+    padding: 24px;
+    border-bottom: 1px solid #280B31;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative; 
+    width: 100%;
+}
+
+header h1{
+    font-size: 16px;
+    font-weight: normal;
+    margin: 0;
+}
+
+header h1 a{
+    color: #F5E3CD
+    text-decoration: none;
+}
+
+header h1 a:hover{
+    box-shadow: 0 0 10px rgba(238, 139, 74, 0.7);
+}
+
+
+header nav{
+    display: flex;
+    justify-content: center;
+    flex-grow: 1;
+}
+
+header nav ul{
+    list-style: none;
+    display: flex;
+    align-items: center;
+    padding: 0;
+}
+
+header nav ul li{
+    margin-right: 34px;
+}
+header nav ul li:last-child{
+    margin-right: 0px;
+}
+
+header nav ul li a{
+    color: #F5E3CD;
+    text-decoration: none;
+    font-size: 16px;
+}
+
+header nav ul li a:hover{
+    color: #fbf1e4;
+    text-shadow: 0 0 10px rgba(247, 219, 174, 0.7), 0 0 20px rgba(246, 152, 89, 0.6), 0 0 30px rgba(250, 146, 78, 0.5);
+}
+
+.logo {
+    position: absolute;
+    right: 24px;
+    top: 50%;
+    transform: translateY(-50%);
+}
+
+.logo img {
+    height: 40px;
 }
