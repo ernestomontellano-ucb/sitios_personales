@@ -14,16 +14,16 @@ body{
 }
 
 i {
-    font-size: 28px; /* Tamaño del ícono */
-    color: rgb(204, 226, 247);  /* Color del ícono */
+    font-size: 28px; 
+    color: rgb(204, 226, 247);  
     position: absolute;
     top: 17pt;
     left: 25pt;
 }
 
 img{
-    width: 70px; /* Ancho de 300 píxeles */
-    height: 70px; /* Alto de 200 píxeles */
+    width: 70px; /* Ancho */
+    height: 70px; /* Alto */
     justify-content: right; 
     position: absolute;
     top: 17pt;
@@ -37,7 +37,7 @@ img{
     justify-content: center; 
     display: flex; /* Para que los botones estén en línea */
     gap: 10px; /* Espaciado entre botones */
-    list-style: none; /* Elimina los puntos de la lista */
+    list-style: none; 
     padding: 20pt;
   
 }
