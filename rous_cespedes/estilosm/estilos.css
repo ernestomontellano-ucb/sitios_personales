@@ -13,7 +13,7 @@ body{
     background-color: rgb(191, 0, 255);
 }
 
-i {
+span {
     font-size: 28px; 
     color: rgb(204, 226, 247);  
     position: absolute;
@@ -21,17 +21,6 @@ i {
     left: 25pt;
 }
 
-img{
-    width: 70px; /* Ancho */
-    height: 70px; /* Alto */
-    justify-content: right; 
-    position: absolute;
-    top: 17pt;
-    left: 55pt;
-    
-  
-    
- }
 .encabezado {
     background-color: rgb(115, 0, 153);
     justify-content: center; 
@@ -49,15 +38,15 @@ img{
 .encabezado li a {
     text-decoration: none; /* Quita el subrayado */
     background-color: rgb(115, 0, 153); 
-    color: rgb(245, 217, 255); /* Color del texto */
+    color: rgb(245, 217, 255);
     padding: 10px 15px; /* Espaciado interno */
-    border-radius: 20px; /* Bordes redondeados */
-    border: 2px solid transparent; /* Borde inicial */
+    border-radius: 20px;
+    border: 2px solid transparent; 
     transition: background-color 0.3s, border 0.3s; /* Efecto de transición */
-    display: inline-block; /* Evita problemas con padding */
+    display: inline-block; 
     font-size: 16pt;
     font-family: "Baloo 2";
-    font-weight: 700; /* Negrita */
+    font-weight: 700; 
 }
 
 /* Cambia a un tono más oscuro al pasar el mouse */
@@ -103,4 +92,42 @@ h2{
     text-align: left;
     margin-top: 5pt;
     color: rgb(31, 56, 81);
+}
+
+.name{
+    color: rgb(204, 226, 247);
+    font-family: "Baloo 2";
+    font-size: 35pt;
+}
+
+.boton2{
+    text-decoration: none; /* Quita el subrayado */
+    
+    background-color: rgb(115, 0, 153); 
+    color: rgb(245, 217, 255);
+    padding: 6px 5px; /* Espaciado interno */
+    border-radius: 20px;
+    border: 2px solid transparent; 
+    transition: background-color 0.3s, border 0.3s; /* Efecto de transición */
+    font-size: 13pt;
+    font-family: "Baloo 2";
+    font-weight: 700; 
+
+    background-color: rgb(115, 0, 153);
+   
+    display: flex; /* Para que los botones estén en línea */
+    gap: 10px; /* Espaciado entre botones */
+    
+    padding: 10pt;
+ 
+  
+
+    
+  
+
+}
+
+.boton1{
+    list-style: none;
+    align-items: center;
 }
