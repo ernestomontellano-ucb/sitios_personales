@@ -48,7 +48,7 @@ img{
 
 .encabezado li a {
     text-decoration: none; /* Quita el subrayado */
-    background-color: rgb(115, 0, 153); /* Color de fondo azul */
+    background-color: rgb(115, 0, 153); 
     color: rgb(245, 217, 255); /* Color del texto */
     padding: 10px 15px; /* Espaciado interno */
     border-radius: 20px; /* Bordes redondeados */
@@ -60,8 +60,9 @@ img{
     font-weight: 700; /* Negrita */
 }
 
+/* Cambia a un tono más oscuro al pasar el mouse */
 .encabezado li a:hover {
-    background-color: rgb(230, 241, 251); /* Cambia a un tono más oscuro al pasar el mouse */
+    background-color: rgb(230, 241, 251); 
     color: rgb(115, 0, 153);
 }
 
