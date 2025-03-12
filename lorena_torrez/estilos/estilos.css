@@ -1,0 +1,23 @@
+header {
+    padding: 20px;
+    display: flex;
+}
+header h1{}
+header nav{}
+header nav ul{}
+header nav ul li{}
+header nav ul li a{}
+header nav ul li a:hover{}
+
+.morado{
+    background: purple;
+}
+.azul{
+    background: blue;
+}
+.amarillo{
+    background: yellow;
+}
+.fijo{
+    position:fixed;
+}
