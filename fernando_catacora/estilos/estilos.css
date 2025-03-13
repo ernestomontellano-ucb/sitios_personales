@@ -1,3 +1,57 @@
+/*Reseteo General*/
+*{
+    margin: 0;
+    padding: 0;
+    vertical-align: baseline;
+}
+
+*,
+*::before,
+*::after{
+    box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+}
+
+html{
+    scroll-behavior: smooth;
+}
+
+body{
+    min-height: 100vh;
+    scroll-behavior: smooth;
+    text-rendering: optimizeSpeed;
+    line-height: 1.5;
+}
+
+ul, ol{
+    list-style: none;
+}
+
+a{
+    display:block;
+    text-decoration: none;
+    font-family: inherit;
+    font-size: inherit;
+    color: inherit;
+}
+
+p a{
+    display: inline;
+}
+
+img, video, iframe, picture, figure{
+    display:block;
+    max-width: 100%;
+}
+
+form, input, select, textarea, button, label{
+    display:block;
+    font-family: inherit;
+    font-size: inherit;
+    color: inherit;
+}
+/*Contenido*/
 body{
     font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
 }
@@ -5,22 +59,48 @@ body{
 header{
     width: 100%;
     display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 24px;
+    flex-flow: column wrap;
+}
+.container-logo{
+    width: 100%;
+    height: 105px;
     background-color: aquamarine;
 }
-header .Logo{
-    background-color: aliceblue;
-    width: 150px;
-    height: 50px;
+.container-logo img{
+    width: 100px;
+    height: 100px;
+    display: flex;
+    margin: 0 auto;
+}
+header nav{
+    width: 100%;
+    background-color: green;
+    
+}
+header nav ul{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
 }
 header nav ul li{
-    display: inline-block;
-    margin-right: 16px;
+    
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+
 }
-header nav ul li:last-child{
-    margin-right: 0;
+header nav ul li a {
+        width: 100%;
+        height: 49px;
+        padding: 13px 23px;
+        background-color: green;
+        transition: all 0.3s ease;
+}
+
+header nav ul li a:hover {
+    background-color: rgb(38, 97, 77);
 }
 /*Contenido Principal*/
 main{
