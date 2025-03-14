@@ -1,49 +1,49 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Lexend:wght@100..900&family=Montserrat:ital,wght@0,100..900;1,100..900&family=Mulish:ital,wght@0,200..1000;1,200..1000&family=Nunito+Sans:ital,opsz,wght@0,6..12,200..1000;1,6..12,200..1000&family=Open+Sans:ital,wght@0,300..800;1,300..800&family=Outfit:wght@100..900&family=Quicksand:wght@300..700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="estilos/estilos.css">
-    <link rel="shortcut icon" href="recursos/Logo/logo.png">
-    <title>Fernando Catacora</title>
+    <link rel="shortcut icon" href="recursos/Logo/logo1.png"> <!--logo-->
+    <title>Fernando Catacora-Inicio</title>
 </head>
 <body>
     <!--Cabezera-->
     <header>
         <div class="container-logo">
-            <img src="recursos/Logo/logo.png" alt="logo">
+            <a href="index.html">
+                <img src="recursos/Logo/logo1.png" alt="logo">
+            </a>  
+            <svg class="hamburguesa" id="open" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" width="44" height="44" stroke-width="3">
+                <path d="M4 6l16 0"></path>
+                <path d="M4 12l16 0"></path>
+                <path d="M4 18l16 0"></path>
+              </svg>   
         </div>
-        <nav>
-            <ul>
-                <li><a href="#">Biografia</a></li>
-                <li><a href="#">Mis servicios</a></li>
-                <li><a href="#">Diario visual</a></li>
-                <li><a href="#">Idolos</a></li>
-                <li><a href="#">Contacto</a></li>
-            </ul>
-        </nav>
+        <nav class="container1" id="des">
+            <svg class="flecha" id="close" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" width="44" height="44" stroke-width="1.75">
+                <path d="M13 7h-6l4 5l-4 5h6l4 -5z"></path>
+              </svg>
+            <nav class="links" id="enlaces">
+                <ul>
+                    <li><a href="biografia.html">Biografia</a></li>
+                    <li><a href="servicios.html">Mis servicios</a></li>
+                    <li><a href="diario-visual.html">Diario visual</a></li>
+                    <li><a href="idolos.html">Idolos</a></li>
+                    <li><a href="contacto.html">Contacto</a></li>
+                </ul>
+            </nav>
+        </nav>  
     </header>
+
+
+
+
     <!--Contenido Princiapal-->
-    <main>
-        <div class="contenido">
-            <div class="text">
-                <h2>Hola bienvenido :D</h2>
-                <p>
-                    Lorem, ipsum dolor sit amet consectetur adipisicing elit. Ratione autem natus quisquam ab soluta amet voluptatem incidunt quia, dolor, <em>esto es una prueba</em>
-                </p>
-            </div>
-            <div class="buton1"><button>Ver mas</button></div>
-            
-        </div>
-        <div class="cont-img"></div>
-    </main>
-    <!--Ejemplo-->
-    <figure>
-        <img src="" alt="img1">
-        <img src="" alt="img2">
-        <img src="" alt="img3">
-        <figcaption>Imagenes</figcaption>
-    </figure>
+
 
     <script src="script/funciones.js" ></script>
 </body>

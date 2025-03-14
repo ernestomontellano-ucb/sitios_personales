@@ -4,7 +4,14 @@
     padding: 0;
     vertical-align: baseline;
 }
-
+:root{
+    --color_primario: #008C65 ;
+    --color_boton_hover: #54b298 ;
+    --color_secundario: #045F1B ;
+    --color_secundario_cabezera: #e6efe8;
+    --color_neutral_blanco: #fefefe ;
+    --color_beutral_negro:#242424 ;
+}
 *,
 *::before,
 *::after{
@@ -51,9 +58,10 @@ form, input, select, textarea, button, label{
     font-size: inherit;
     color: inherit;
 }
-/*Contenido*/
+
+
 body{
-    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    font-family: "Lexend", sans-serif;
 }
 /*Cabezera*/
 header{
@@ -64,7 +72,7 @@ header{
 .container-logo{
     width: 100%;
     height: 105px;
-    background-color: aquamarine;
+    background-color: var(--color_secundario_cabezera);
 }
 .container-logo img{
     width: 100px;
@@ -72,64 +80,107 @@ header{
     display: flex;
     margin: 0 auto;
 }
-header nav{
+header .container1{
     width: 100%;
-    background-color: green;
-    
-}
-header nav ul{
+    background-color: var(--color_primario);
+    color: black;
     display: flex;
-    flex-direction: row;
-    justify-content: space-between;
-    align-items: center;
+    justify-content: center;
 }
-header nav ul li{
-    
+.links{
+    width: 100%;
+    max-width: 1200px;
+}
+.links ul{ 
     display: flex;
-    flex-direction: row;
     justify-content: space-between;
-    align-items: center;
-
+    
 }
 header nav ul li a {
         width: 100%;
         height: 49px;
         padding: 13px 23px;
-        background-color: green;
-        transition: all 0.3s ease;
+        text-align: center;
+        color: var(--color_neutral_blanco);
+        background-color: var(--color_primario);
+        transition: all 300ms ease-out;
 }
 
 header nav ul li a:hover {
-    background-color: rgb(38, 97, 77);
+    background-color: var(--color_boton_hover);
+    color: var(--color_beutral_negro);
 }
+header .hamburguesa{
+    display: none;
+}
+header .flecha{
+    display: none;
+}
+
+@media screen and (max-width: 696px) {
+    
+    header .container-logo .hamburguesa{
+        display: block;
+        cursor: pointer;
+        transition: all 300ms ease-out;
+    }
+    header .container-logo .hamburguesa:hover{
+        color: var(--color_boton_hover);
+    }
+    header{
+        padding: 0 16px;
+        background-color: var(--color_secundario_cabezera);
+    }
+    .container-logo{
+        display: flex;
+        flex-flow: row;
+        justify-content: space-between;
+        align-items: center;
+    }
+    /*colocarlo fijo*/
+    .container1{
+        display: flex;
+        flex-flow: column wrap;
+        z-index: 1000;
+        position: fixed;
+        align-items: center;
+        background-color: var(--color_primario);
+        height: 100vh;
+        width: 100%;
+        right: 0;
+        top: 0;
+        transition: all 300ms ease-out;
+        transform: translateX(100%);
+    }
+
+
+
+    header .flecha{
+        display: flex;
+        width: 70px;
+        height: 70px;
+        color: var(--color_neutral_blanco);
+        cursor: pointer;
+    }
+    header .flecha:hover{
+        color: var(--color_boton_hover);
+    }
+    .links{
+        flex-flow: column wrap;
+    }
+    .links ul{ 
+        display: flex;
+        flex-flow: column wrap;
+        
+    }
+    .container1.active{
+        transform: translateX(0%);
+    }
+}
+
+
+
+
 /*Contenido Principal*/
-main{
-    width: 75%;
-    padding: 24px;
-    display: flex;
-    margin: 0 auto;
-}
-.cont-img{
-    width: 950px;
-    height: 250px;
-    background-color: bisque;
-    margin-left: 75px;
-}
-.buton1{
-    margin-top: 50px;
-}
-.buton1 button{
-    padding: 10px 25px;
-    background-color: aquamarine;
-    color: black;
-    border: 1px solid transparent;
-    border-radius: 13px;
-    cursor: pointer;
-    transition: all 0.3s ease;
-}
-.buton1 button:hover{
-    background-color: rgb(40, 93, 75);
-    color: white;
-}
 
 
