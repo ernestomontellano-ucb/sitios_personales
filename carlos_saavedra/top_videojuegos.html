@@ -3,9 +3,67 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>sitio_personal_carlos_saavedra_top_videojuegos</title>
+    <title>Top Ranked Videojuegos</title>
+    <link rel="stylesheet" href="estilos/estilos.css">
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&family=Lora&display=swap" rel="stylesheet">
 </head>
 <body>
-    
+    <header>
+        <nav>
+            <ul>
+                <li><a href="index.html">Inicio</a></li>
+                <li><a href="biografia.html">Biografía</a></li>
+                <li><a href="gustos.html">Gustos y pasatiempos</a></li>
+                <li><a href="referentes.html">Inspiraciones o referentes</a></li>
+                <li><a href="viajes.html">Viajes por el mundo</a></li>
+                <li><a href="contacto.html">Contacto</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <section class="top-videojuegos">
+            <h2>Top Ranked Videojuegos</h2>
+
+            <!-- Carrusel de Overwatch -->
+            <h3>Overwatch</h3>
+            <div class="carousel-container">
+                <button class="prev">‹</button>
+                <div class="carousel">
+                    <div class="slide"><img src="imagenes/overwatch_rank_1.jpg" alt="Overwatch Rank 1"></div>
+                    <div class="slide"><img src="imagenes/overwatch_rank_2.jpg" alt="Overwatch Rank 2"></div>
+                    <div class="slide"><img src="imagenes/overwatch_rank_3.jpg" alt="Overwatch Rank 3"></div>
+                </div>
+                <button class="next">›</button>
+            </div>
+
+            <!-- Carrusel de Marvel Rivals -->
+            <h3>Marvel Rivals</h3>
+            <div class="carousel-container">
+                <button class="prev">‹</button>
+                <div class="carousel">
+                    <div class="slide"><img src="imagenes/marvel_rivals_rank_1.jpg" alt="Marvel Rivals Rank 1"></div>
+                    <div class="slide"><img src="imagenes/marvel_rivals_rank_2.jpg" alt="Marvel Rivals Rank 2"></div>
+                    <div class="slide"><img src="imagenes/marvel_rivals_rank_3.jpg" alt="Marvel Rivals Rank 3"></div>
+                </div>
+                <button class="next">›</button>
+            </div>
+
+            <!-- Carrusel de Fortnite -->
+            <h3>Fortnite</h3>
+            <div class="carousel-container">
+                <button class="prev">‹</button>
+                <div class="carousel">
+                    <div class="slide"><img src="imagenes/fortnite_rank_1.jpg" alt="Fortnite Rank 1"></div>
+                    <div class="slide"><img src="imagenes/fortnite_rank_2.jpg" alt="Fortnite Rank 2"></div>
+                    <div class="slide"><img src="imagenes/fortnite_rank_3.jpg" alt="Fortnite Rank 3"></div>
+                </div>
+                <button class="next">›</button>
+            </div>
+
+        </section>
+    </main>
+
+    <script src="scripts/carrusel.js"></script>
 </body>
 </html>
