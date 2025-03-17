@@ -56,6 +56,8 @@ let formulario=document.getElementById("formulario1");
             inputT.value="";
         }    
     }
-
-
 formulario.addEventListener("submit", validar)
+document.querySelector("textarea").addEventListener("click", function() {
+    this.setSelectionRange(0, 0);
+});
+

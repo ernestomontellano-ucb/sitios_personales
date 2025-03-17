@@ -17,6 +17,7 @@
     --color_exito_tipografia: #0A6314;
     --color_fracaso_fondo: #F08B8B;
     --color_frcaso_tipografia: #5D0101 ;
+    --color_fondo_card:#E6F4F0;
 }
 *,
 *::before,
@@ -64,7 +65,29 @@ form, input, select, textarea, button, label{
     font-size: inherit;
     color: inherit;
 }
+@keyframes uni {
+    20%{
+        background: url(../recursos/diario_visual/u.jpeg) center no-repeat;
+        background-size: cover;
+    }
+    40%{
+        background: url(../recursos/diario_visual/la\ u.jpeg) center no-repeat;
+    background-size: cover;
+    }
+    60%{
+        background: url(../recursos/diario_visual/dia.jpeg) center no-repeat;
+        background-size: cover;
+    }
+    80%{
+        background: url(../recursos/diario_visual/apuntes.jpeg) center no-repeat;
+        background-size: cover;
+    }
+    100%{
+        background: url(../recursos/diario_visual/hora.jpeg) center no-repeat;
+        background-size: cover;
+    }
 
+}
 
 body{
     font-family: "Lexend", sans-serif;
@@ -184,10 +207,61 @@ header .flecha{
     }
 }
 
+/*Inicio*/
+.inicio{
+    width: 85%;
+    display: flex;
+    justify-content: space-around;
+    margin: 25px auto;
+    margin-bottom: 60px;
 
+}
+.cont-inicio1{
+    width: 387px;
+    height: 387px;
+}
+.cont-inicio1 img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+.conta-inicio{
+    width: 60%;
+}
+.conta-inicio p{
+    font-size: 1rem;
+    font-weight: 300;
+}
+.conta-inicio h1{
+    margin-bottom: 10px;
+}
+.banner-inicio{
+    margin-top: 0px;
+    position: relative;
+    width: 100%;
+    height: 250px;
+    background: url(../recursos/banner/banner5.jpg) no-repeat center;
+    background-size: cover;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+@media screen and (max-width: 1146px) {
+    .inicio{
+        width: 100%;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        padding: 11px;
+    }
+    .conta-inicio{
+        width: 90%;
+    }
+    .conta-inicio p{
+        width: 100%;
 
-
-/*Contenido Principal*/
+    }
+}
 
 /*Formulario*/
 .banner{
@@ -257,12 +331,14 @@ header .flecha{
     border-radius: 6px;
     border: 1px solid transparent;
     color: var(--color_beutral_gris);
+    transition: all 0.3s ease-out;
 
     
 }
 .info input::placeholder{
     color: var(--color_neutral_gris_input);
 }
+
 .info2 label{
     margin-bottom: 13px;
 }
@@ -278,9 +354,10 @@ header .flecha{
     color: var(--color_beutral_gris);
     border: 1px solid transparent;
 }
-.info input {
-    color: var(--color_beutral_gris);
+.info-2 input::placeholder{
+    color: var(--color_neutral_gris_input);
 }
+
 .info-mensaje{
     width: 100%;
     height: 204px;
@@ -314,7 +391,12 @@ button:hover{
     background-color: var(--color_boton_hover);
     color: var(--color_beutral_gris);
 }
-
+.info input:focus{
+    outline: 3px solid var(--color_boton_hover);
+}
+.info-mensaje textarea:focus{
+    outline: 3px solid var(--color_boton_hover);
+}
 /*alertas*/
 .containerA{
     display: flex;
@@ -326,7 +408,7 @@ button:hover{
     background-color: var(--color_exito_fondo);
     color: var(--color_exito_tipografia);
     display: flex;
-    width: 40%;
+    width: 60%;
     margin: 0 auto;
     position: fixed;
     top: 0;
@@ -345,7 +427,7 @@ button:hover{
     position: fixed;
     top: 0;
     display: flex;
-    width: 40%;
+    width: 60%;
     margin: 0 auto;
     justify-content: center;
     align-items: center;
@@ -519,3 +601,256 @@ footer .icon-container{
     }
 }
 
+/*Idolos y referencias*/
+.banner-i{
+    margin-top: 0px;
+    position: relative;
+    width: 100%;
+    height: 250px;
+    background: url(../recursos/banner/banner5.jpg) no-repeat center;
+    background-size: cover;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.idolos{
+    margin-top: 15px;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+}
+.layaout{
+    width: 100%;
+    height:100% ;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    gap: 80px;
+    padding: 30px;
+}
+.layaout__article{
+    position: relative;
+    width: 400px;
+    height: 400px;
+    overflow: hidden;
+    cursor: pointer;
+    border-radius: 5px;
+} 
+.article__img{
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    transition: all 0.3s ease-in-out;
+    object-fit: cover;
+}
+.article__overlay{
+    position: absolute;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    background-color: var(--color_primario);
+    margin-top: 0;
+    padding: 33px;
+    color: white;
+
+    transform:  translateX(-40rem);
+    transition: all 0.3s ease-in-out;
+}
+.article__title{
+    margin-top: 15px;
+}
+.article__description{
+    margin-top: 25px;
+    font-weight: 200;
+
+}
+.layaout__article--2 > .article__overlay{
+    background-color: var(--color_secundario);
+    height: 50%;
+
+    position: relative;
+    transform:  translateY(415px);
+
+}
+.layaout__article--3 > .article__overlay{
+    background-color: var(--color_boton_hover);
+    position: relative;
+    transform:  translateY(40rem);
+}
+/*efecto*/
+.layaout__article:hover > .article__overlay{
+    transform: translateX(0);
+}
+.layaout__article--2:hover > .article__overlay{
+    transform:  translateY(200px);
+}
+.layaout__article--2:hover>.article__img{
+    transform: translateY(-200px);
+}
+.layaout__article--3:hover > .article__overlay{
+    transform: translateY(0);
+}   
+
+/*servicios*/
+.banner-s{
+    margin-top: 0px;
+    position: relative;
+    width: 100%;
+    height: 250px;
+    background: url(../recursos/banner/banner\ 6.jpg) no-repeat center;
+    background-size: cover;
+    display: flex;
+    align-items: center;
+    justify-content: center; 
+}
+.contanier-cards{
+    margin: 35px auto;
+    width: 95%;
+    display: flex;
+    flex-flow: row wrap;
+    gap: 45px ;
+    justify-content: space-around;
+    align-items: center;
+    margin-bottom: 60px;
+}
+.card{
+    width: 282px;
+    display: flex;
+    flex-direction: column;
+    background-color: var(--color_fondo_card);
+    justify-content: center;
+    align-items: center;
+    padding: 13px 16px;
+    box-shadow: 1px 3px 5px var(--color_neutral_gris_300);
+}
+.card .icono{
+    width: 134px;
+    height: 134px;
+    background-color: var(--color_beutral_gris);
+    border-radius: 100%;
+    margin: auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    
+}
+.icono svg{
+    width: 85px;
+    height: 85px;
+    color: var(--color_primario);
+}
+.text-c{
+    margin-top: 9px;
+    margin-bottom: 9px;
+    text-align: center;
+}
+.text-c h3{
+    margin-bottom: 9px;
+}
+.text-c p{
+    font-weight: 300;
+    font-size: 15px;
+}
+.c-b{
+    margin: auto;
+}
+.btn1{
+    width: 100%;
+    height: 49px;
+    padding: 13px 23px;
+    text-align: center;
+    border-radius: 8px;
+    border: 1px solid transparent;
+    cursor: pointer;
+    color: var(--color_neutral_blanco);
+    background-color: var(--color_primario);
+    transition: all 300ms ease-out;
+}
+.btn1:hover{
+    background-color: var(--color_boton_hover);
+    color: var(--color_beutral_gris);
+}
+/*diario visual*/
+.banner-ds{
+    margin-top: 0px;
+    position: relative;
+    width: 100%;
+    height: 250px;
+    background: url(../recursos/banner/banner-7.jpg) no-repeat center;
+    background-size: cover;
+    display: flex;
+    align-items: center;
+    justify-content: center; 
+}
+.diario{
+    width: 65%;
+    display: flex;
+    margin: 45px auto;
+    flex-direction: column;
+
+}
+.u{
+    width: 100%;
+}
+.u h3{
+    margin-bottom: 30px;
+   text-align: center;  
+}
+.sec{
+    width: 100%;
+    display: flex;
+    
+}
+.cont-di{
+    width: 340px;
+    height: 309px;
+    background: url(../recursos/diario_visual/viaje.jpeg) center no-repeat;
+    background-size: cover;
+    animation: uni 10s 0.3s 3 normal forwards paused;
+}
+.cont-di:hover{
+    animation-play-state: running;
+}
+.sec p{
+    margin-left: 77px;
+    width: 520px;
+}
+.sec1 p{
+    width: 520px;
+    margin-right: 77px;
+    margin-left: 0px;
+}
+.di2{
+    background: url(../recursos/diario_visual/proceso.jpeg) center no-repeat;
+    background-size: cover;
+}
+.di4{
+    background: url(../recursos/diario_visual/comida.jpeg) center no-repeat;
+    background-size: cover;
+}
+@media screen and (max-width: 970px) {
+    .sec{
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        margin-bottom: 50px;
+    }
+    .sec p{
+        margin-left: 0;
+    }
+    .cont-di{
+        margin-bottom: 55px;
+    }
+    .sec1 p{
+        margin-right: 0;
+        margin-bottom: 55px;
+    }
+}
