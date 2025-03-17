@@ -1,20 +1,22 @@
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
 body {
+    padding: 100px;
     font-family: 'Lora', serif;
     background-color: #eae9e0;
     color: #4c433c;
-    margin: 0;
-    padding: 0;
+    font-size: large;
     text-align: center;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: flex-start;
-    height: 100vh;
 }
 
 
 header {
-    background-color: rgba(206, 194, 181, 0.8);
+    background-color: rgba(206, 194, 181, 0.8); 
     padding: 25px;
     width: 100%;
     position: fixed;
@@ -25,65 +27,196 @@ header {
     align-items: center;
     backdrop-filter: blur(10px);
     box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);
-}
-
-nav {
-    width: 100%;
-    display: flex;
-    justify-content: center;
+    z-index: 10;
 }
 
 nav ul {
-    list-style: none;
-    padding: 0;
-    margin: 0;
+    list-style-type: none;
     display: flex;
-    gap: 20px; 
-    max-width: 80%; 
-    flex-wrap: wrap; 
     justify-content: center;
 }
 
 nav ul li {
-    margin: 0;
+    margin: 0 15px;
 }
 
 nav ul li a {
+    color: #4c433c; 
     text-decoration: none;
-    color: #4c433c;
     font-size: 16px;
+    font-weight: bold;
     padding: 10px 15px;
     border-radius: 5px;
-    background-color: rgba(190, 177, 157, 0.7);
+    background-color: rgba(190, 177, 157, 0.7); 
     transition: all 0.3s ease;
 }
 
-nav ul li a:hover {
-    background-color: rgba(176, 159, 143, 0.9);
+nav ul li a:hover,
+nav ul li a:focus {
+    background-color: rgba(176, 159, 143, 0.9); 
     color: white;
 }
 
-
-.intro {
-    max-width: 800px;
-    margin: auto;
-    font-size: 18px;
-    line-height: 1.6;
-    margin-top: 120px;
-    text-align: justify;
-    background: rgba(255, 255, 255, 0.2);
-    padding: 20px;
-    border-radius: 15px;
-    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
-    backdrop-filter: blur(8px);
+nav ul li a.active {
+    background-color: #685b52; 
+    color: white; 
 }
 
 
-.intro h2 {
-    font-family: 'Playfair Display', serif;
-    font-size: 32px;
-    text-transform: uppercase;
-    letter-spacing: 2px;
-    margin-bottom: 15px;
+main {
+    padding: 20px;
+    margin-top: 120px; 
+}
+
+section h2, section h3 {
+    margin: 20px 0;
+    font-size: 24px;
+    color: #4c433c;
+}
+
+
+.carousel-container {
+    position: relative;
+    width: 80%;
+    margin: 0 auto;
+    overflow: hidden;
+}
+
+.carousel {
+    display: flex;
+    transition: transform 0.5s ease;
+}
+
+.slide {
+    min-width: 100%;
+    box-sizing: border-box;
+}
+
+.slide img {
+    width: 100%;
+    height: 500px;
+    border-radius: 8px;
+    object-fit: cover;
+}
+
+button {
+    background-color: rgba(0, 0, 0, 0.5);
+    color: white;
+    border: none;
+    padding: 10px;
+    cursor: pointer;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    z-index: 10;
+    transition: background-color 0.3s ease;
+}
+
+button.prev {
+    left: 10px;
+}
+
+button.next {
+    right: 10px;
+}
+
+button:hover,
+button:focus {
+    background-color: rgba(0, 0, 0, 0.8);
+}
+
+
+.gustos .carousel-container, .viajes .carousel-container, .top-videojuegos .carousel-container {
+    margin-bottom: 30px;
+}
+
+.gustos img, .viajes img, .top-videojuegos img {
+    width: 100%;
+    height: 500px;
+    border-radius: 8px;
+    margin-bottom: 10px;
+    object-fit: cover;
+}
+
+
+.contacto {
     text-align: center;
+    margin-top: 40px;
+}
+
+.contacto p {
+    margin: 10px 0;
+    font-size: 18px;
+}
+
+.contacto a {
+    color: #007BFF; 
+    text-decoration: none;
+    transition: text-decoration 0.3s ease;
+}
+
+.contacto a:hover,
+.contacto a:focus {
+    text-decoration: underline;
+}
+
+
+.top-videojuegos .carousel-container {
+    margin-bottom: 40px;
+}
+
+
+main {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 40px;
+    background-color: white;
+    border-radius: 8px;
+}
+
+
+@media (max-width: 768px) {
+    .carousel-container {
+        width: 90%;
+    }
+
+    .carousel {
+        flex-direction: column;
+    }
+
+    button.prev, button.next {
+        top: 10px;
+        padding: 5px;
+    }
+}
+
+.bio {
+    max-width: 1000px;
+    margin: auto;
+    padding: 120px 20px 40px;
+}
+
+.info {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 40px;
+    text-align: left;
+}
+
+.texto {
+    flex: 1;
+    padding-right: 20px;
+}
+
+.imagen {
+    width: 40%;
+}
+
+.imagen img {
+    width: 100%;
+    height: 300px;
+    border-radius: 10px;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+    object-fit: cover;
 }
