@@ -1,5 +1,7 @@
 /* Estilos generales */
 */{
+    margin: 0;
+    padding: 0;
 
 }
 body {
@@ -561,7 +563,7 @@ header h1 {
 /* Botón de Inicio */
 .inicio-button {
     display: inline-block;
-    text-decoration: none; /* Elimina subrayado */
+    text-decoration: none; 
     color: #204A37; /* Color del texto */
     font-family: 'Raleway', sans-serif;
     font-size: 18px;
@@ -569,8 +571,8 @@ header h1 {
     border: 2px solid #204A37; /* Borde verde oscuro */
     border-radius: 5px; /* Bordes redondeados */
     transition: background 0.3s ease, color 0.3s ease, transform 0.3s ease; /* Suave transición */
-    margin-bottom: 15px; /* Espaciado debajo del botón */
-    background-color: rgba(255, 255, 255, 0.8); /* Fondo blanco semitransparente */
+    margin-bottom: 15px; 
+    background-color: rgba(255, 255, 255, 0.8); 
 }
 
 .inicio-button:hover {
@@ -604,8 +606,8 @@ header h1 {
 .card {
     background-color: #FFFFFF; 
     border: 2px solid #204A37;
-    border-radius: 10px; /* Bordes redondeados */
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Sombra suave */
+    border-radius: 10px; 
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); 
     padding: 20px;
     width: 300px; /* Ancho fijo */
     text-align: center;
