@@ -1,45 +1,643 @@
-*{
+/* Estilos generales */
+*/{
+
+}
+body {
     margin: 0;
     padding: 0;
-    box-sizing: border-box;
-    
+    font-family: 'Quicksand', sans-serif;
+    background-image: url('../imagenes/fondo.jpg'); /* Ruta hacia la imagen */
+    background-size: cover;
+    background-position: center;
+    text-align: center;
+    color: #ffffff;
 }
-body{
-    background-color:rgb(168, 230, 207);
-    font-family: "Inter",quicksand;
-    display: block;
 
+/* Menú de navegación arriba */
+.nav-menu {
+    list-style: none;
+    padding: 10px 0;
+    margin: 10px;
+    display: flex; 
+    justify-content: center; 
+    gap: 20px; 
+    white-space: nowrap; 
+}
+
+.nav-menu li {
+    display: inline-block; /* Garantiza que los elementos estén en línea */
+}
+
+.nav-menu a {
+    text-decoration: none;
+    color: #ffffff; 
+    font-size: 18px; 
+    font-family: 'Raleway', sans-serif;
+    padding: 10px 15px; 
+    border-radius: 5px; 
+    transition: background 0.3s ease, color 0.3s ease; 
+}
+
+.nav-menu a:hover {
+    background: rgba(255, 255, 255, 0.2);
+    color: #fff; 
+}
+
+/* Borde para el enlace "Inicio" */
+.nav-menu a[href="index.html"] {
+    border: 2px solid  rgba(164, 183, 123); 
+    border-radius: 5px; 
+    padding: 10px 15px; 
+    transition: background 0.3s ease, color 0.3s ease, border 0.3s ease;
+}
+
+.nav-menu a[href="index.html"]:hover {
+    background: rgba(255, 255, 255, 0.5); 
+    color: #fff; 
+    border-color: #fff; 
+}
+
+
+/* Nombre debajo del menú */
+.page-header {
+    margin: 20px 0; /* Espacio entre el nombre y otros elementos */
     
 }
-header{
-    background-color: rgb(128, 199, 131);
-    padding: 30px;
-    border-bottom: 3px solid rgb(164, 183, 123);
+
+.page-header h1 {
+    font-size: 48px; /* Tamaño del nombre incrementado */
+    font-family: 'Raleway', sans-serif; /* Fuente estilizada */
+    margin: 0; /* Elimina márgenes adicionales */
+    text-transform: uppercase; /* Convierte el texto en mayúsculas */
+    letter-spacing: 2px; /* Espaciado entre letras */
+    color: #ffffff; /* Color del texto del nombre */
+    background: rgba(164, 183, 123, 0.5); 
+}
+
+/* Contenedor principal */
+.container {
     display: flex;
     justify-content: center;
     align-items: center;
+    min-height: calc(100vh - 200px); /* Ajusta la altura excluyendo el menú y el nombre */
 }
 
-a{
-    
-    text-decoration: none;
-    color: black;
-}
-nav ul {
+/* Círculo de bienvenida */
+.welcome-circle {
+    width: 350px;
+    height: 350px;
+    background-color: rgba(0, 0, 0, 0.7);
+    border-radius: 50%;
     display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    opacity: 0; /* Comienza invisible */
+    transform: scale(0.5); /* Comienza reducido */
+    transition: opacity 1s ease, transform 1s ease; /* Transición suave para entrada */
+}
+
+.welcome-circle.active {
+    opacity: 1; /* Se hace visible */
+    transform: scale(1); /* Escala a tamaño normal */
+}
+
+.welcome-circle h2 {
+    font-family: 'Raleway', sans-serif;
+    font-size: 32px; /* Tamaño incrementado */
+    margin-bottom: 15px;
+    color: #fff;
+}
+
+.welcome-circle p {
+    font-size: 20px; /* Ajuste del texto para mayor legibilidad */
+    padding: 0 20px;
+    color: #fff;
+    text-align: center; /* Centra el texto dentro del círculo */
+}
+
+/*Biografia*/
+
+/* Contenedor de las cartitas */
+.bio-main {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: flex-start;
+    gap: 20px;
+    padding: 20px;
+    
+}
+
+.bio-header{
+    background: rgba(164, 183, 123, 0.5); 
+    margin: 0px;
+    padding: 5px;
+    font-family: 'Raleway', sans-serif;
+
+
+}
+/* Cartas principales */
+
+.card {
+    background-color: rgba(255, 255, 255, 0.9);
+    border: 2px solid #80C783;
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    width: 300px;
+    overflow: hidden;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 12px rgba(0, 0, 0, 0.2);
+}
+
+/* Imágenes dentro de las cartas */
+.card img {
+    width: 100%; /* Ocupa todo el ancho de la carta */
+    height: 200px; /* Altura fija para todas las imágenes */
+    object-fit: cover; /* Asegura que la imagen se recorte proporcionalmente sin deformarse */
+    border-bottom: 2px solid #67A369; /* Línea decorativa debajo de la imagen */
+}
+
+
+/* Título de la carta */
+.card-title {
+    font-size: 18px;
+    font-family: 'Raleway', sans-serif;
+    margin: 0;
+    padding: 15px;
+    cursor: pointer;
+    background-color: #67A369;
+    color: #ffffff;
+    border-bottom: 2px solid #80C783;
+}
+
+/* Contenido desplegable de la carta */
+.card-content {
+    padding: 15px;
+    font-size: 16px;
+    font-family: 'Quicksand', sans-serif;
+    color: #333;
+    display: none; 
+}
+
+/* Mostrar contenido cuando se despliega */
+.card.expanded .card-content {
+    display: block;
+}
+
+/*Gustos*/
+
+/* Botón de Inicio */
+.inicio-button {
+    display: inline-block;
+    text-decoration: none; /* Elimina subrayado */
+    color: #204A37; /* Color del texto */
+    font-family: 'Raleway', sans-serif;
+    font-size: 18px;
+    padding: 10px 20px; /* Espaciado interno */
+    border: 2px solid  #204A37; 
+    border-radius: 5px; /* Bordes redondeados */
+    padding: 10px 15px; /* Espaciado interno para que el borde no se pegue al texto */
+    transition: background 0.3s ease, color 0.3s ease, border 0.3s ease; /* Transición suave */
+    margin-bottom: 15px; /* Espacio debajo del botón */
+}
+
+.inicio-button:hover {
+    background-color: #204A37; 
+    color: #fff; /* Cambia texto a blanco */
+    transform: scale(1.05); /* Efecto de aumento */
+}
+
+
+/* Fondo general */
+.gustos-page {
+    margin: 0;
+    padding: 0;
+    font-family: 'Quicksand', sans-serif;
+    background-image: url('../imagenes/fondo_gustos.jpg'); /* Fondo único */
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+    color: #333;
+    text-align: center;
+}
+
+/* Encabezado */
+
+
+.gustos-header {
+    background-color: rgba(255, 255, 255, 0.0);
+    padding: 10px;
+    margin-bottom: 10px;
+    font-size: 15px; 
+    margin: 0;
+}
+
+.gustos-header h1 {
+    font-size: 36px;
+    font-family: 'Raleway', sans-serif;
+    margin: 0px;
+    padding: 5px;
+    color: #f3f3f3;
+    background: rgb(32, 74, 55, 0.7);
+}
+
+/* Lista de gustos */
+.gustos-list {
+    list-style: none;
+    padding: 5px;
+    margin: 5px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 15px;
+}
+
+.gustos-list a {
+    background-color: rgba(255, 255, 255, 0.9);
+    border: 2px solid #204A37;
+    border-radius: 10px;
+    padding: 10px 20px;
+    text-decoration: none;
+    color: #204A37;
+    font-size: 18px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease, background 0.3s ease;
+}
+
+.gustos-list a:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 12px rgba(0, 0, 0, 0.2);
+    background-color: rgb(32, 74, 55,0.5);
+    color: #fff;
+}
+
+/* Detalles de cada gusto */
+.gusto-detail {
+    display: none;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 80%;
+    max-width: 500px;
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+    text-align: center;
+    z-index: 1000;
+}
+
+.gusto-detail img {
+    width: 100%; /* Ocupa todo el ancho disponible en el contenedor */
+    max-width: 300px; /* Tamaño máximo del ancho */
+    height: 200px; /* Altura fija para todas las imágenes */
+    object-fit: cover; /* Asegura que las imágenes se ajusten proporcionalmente sin deformarse */
+    border-radius: 10px; /* Bordes redondeados para mantener un diseño agradable */
+    margin-bottom: 15px; /* Espaciado inferior entre la imagen y el texto */
+}
+
+.gusto-detail p {
+    font-size: 18px;
+    color: #333;
+    font-family: 'Raleway', sans-serif;
+    margin-bottom: 20px;
+}
+
+/* Mostrar gusto seleccionado */
+.gusto-detail:target {
+    display: block;
+}
+
+/* Botón para cerrar */
+.close-detail {
+    display: inline-block;
+    margin-top: 10px;
+    padding: 10px 20px;
+    background-color: #A4B77B;
+    color: #fff;
+    text-decoration: none;
+    border-radius: 5px;
+    font-size: 16px;
+    transition: background 0.3s ease, transform 0.3s ease;
+}
+
+.close-detail:hover {
+    background-color: #A4B77B;
+    transform: scale(1.05);
+}
+
+
+/* Diseño para la página de Inspiraciones */
+
+.hidden {
+    display: none; /* Oculta el contenido */
+}
+
+/* Botón de Inicio */
+.inicio-button {
+    display: inline-block;
+    text-decoration: none;
+    color: #204A37;
+    font-family: 'Raleway', sans-serif;
+    font-size: 18px;
+    padding: 10px 15px;
+    border: 2px solid #204A37;
+    border-radius: 5px;
+    transition: background 0.3s ease, color 0.3s ease, transform 0.3s ease;
+    margin-bottom: 15px;
+    background-color: rgba(255, 255, 255, 0.8);
+}
+
+.inicio-button:hover {
+    background-color: #204A37;
+    color: #fff;
+    transform: scale(1.05);
+}
+
+/* Botón para Mostrar/Ocultar */
+.show-section-button {
+    display: inline-block;
+    margin: 20px 0;
+    padding: 10px 20px;
+    background-color: #204A37;
+    color: #fff;
+    font-family: 'Raleway', sans-serif;
+    font-size: 18px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background 0.3s ease, transform 0.3s ease;
+}
+
+.show-section-button:hover {
+    background-color: #1b3c2e;
+    transform: scale(1.05);
+}
+
+/* Sección oculta */
+.hidden {
+    display: none;
+}
+
+/* Contenedor de mascotas y viajes */
+.seccion-mascotas-viajes {
+    margin-top: 20px;
+    padding: 20px;
+    background-color: #f9f9f9;
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+.seccion-mascotas-viajes h2{
+    color: #000;
+}
+.imagenes-contenedor {
+    display: flex;
+    flex-wrap: wrap;
     justify-content: center;
     gap: 20px;
-    list-style: none;
+    margin-top: 20px;
 }
 
-nav ul li {
-    margin-right: 10px; 
+.imagen-contenido {
+    width: 200px;
+    text-align: center;
 }
-h2{
-    background-color: rgb(128, 199, 131);
-    margin: 30px;
+
+.imagen-contenido img {
+    width: 100%;
+    height: 150px;
+    border-radius: 10px;
+    object-fit: cover;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.imagen-contenido p {
+    margin-top: 10px;
+    font-size: 14px;
+    color: #333;
+    font-family: 'Quicksand', sans-serif;
+}
+
+
+/*Diario Visual*/
+.diario-visual-page {
+    margin: 0;
+    padding: 0;
+    font-family: 'Quicksand', sans-serif;
+    color: #333;
+    text-align: center;
+}
+
+/* Encabezado */
+header {
+    color: white;
+    padding: 20px;
+
+}
+
+header h1 {
+    font-family: 'Raleway', sans-serif;
+    font-size: 36px;
+    margin: 0;
+    background: rgba(109, 162, 138, 0.7);
+}
+
+/* Contenedor principal */
+.diario-main {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
+    padding: 20px;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+/* Diseño de las cartas */
+.card {
+    background-color: #FFFFFF; 
+    border: 2px solid #204A37; /* Borde rojo */
+    border-radius: 10px; /* Bordes redondeados */
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Sombra suave */
+    padding: 20px;
+    width: 300px; /* Ancho fijo */
+    text-align: left;
+    transition: transform 0.3s ease, box-shadow 0.3s ease; /* Transiciones suaves */
+}
+
+.card:hover {
+    transform: translateY(-5px); /* Mueve la carta hacia arriba ligeramente */
+    box-shadow: 0 8px 12px rgba(0, 0, 0, 0.2); /* Aumenta la sombra */
+}
+
+/* Títulos de las cartas */
+.card h2 {
+    font-family: 'Raleway', sans-serif;
+    font-size: 24px;
+    color: #204A37;
+    margin-bottom: 10px;
+}
+
+/* Párrafos dentro de las cartas */
+.card p {
+    font-size: 16px;
+    line-height: 1.6;
+    color: #333;
+    font-family: 'Quicksand', sans-serif;
+}
+
+/* Contenedor de imágenes dentro de la carta */
+.card-images {
     display: flex;
     justify-content: center;
-    align-items: center;
+    gap: 10px;
+    margin-top: 15px;
 }
 
+/* Imágenes dentro de las cartas */
+.card-images img {
+    width: 120px; /* Ancho fijo */
+    height: 120px; /* Altura fija */
+    object-fit: cover; /* Recorta la imagen para ajustarla sin distorsionarla */
+    border-radius: 10px; /* Bordes redondeados */
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Sombra suave */
+    transition: transform 0.3s ease; /* Transición suave */
+}
+
+.card-images img:hover {
+    transform: scale(1.05); /* Efecto de aumento al pasar el mouse */
+}
+
+/*Contacto*/
+
+/* Página de contacto */
+.contacto-page {
+    margin: 0;
+    padding: 0;
+    font-family: 'Quicksand', sans-serif;
+    color: #ffffff;
+    text-align: center;
+}
+
+/* Contenedor principal para la imagen y el texto */
+.contacto-container {
+    display: flex;
+    justify-content: center; /* Centra horizontalmente */
+    align-items: center; /* Centra verticalmente */
+    gap: 20px; /* Espaciado entre imagen y texto */
+    padding: 20px;
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+/* Imagen circular */
+.imagen-circulo img {
+    width: 300px; /* Tamaño fijo */
+    height: 300px; /* Tamaño fijo */
+    border-radius: 50%; /* Hace la imagen circular */
+    object-fit: cover; /* Asegura que la imagen no se distorsione */
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Sombra suave */
+}
+
+/* Estilo del texto de contacto */
+.texto-contacto {
+    text-align: left; /* Alinea el texto a la izquierda */
+    font-size: 25px;
+    line-height: 1.6;
+    font-family: 'Raleway', sans-serif;
+}
+
+.texto-contacto p {
+    margin: 10px 0;
+}
+
+
+/* Botón de Inicio */
+.inicio-button {
+    display: inline-block;
+    text-decoration: none; /* Elimina subrayado */
+    color: #204A37; /* Color del texto */
+    font-family: 'Raleway', sans-serif;
+    font-size: 18px;
+    padding: 10px 15px; /* Espaciado interno */
+    border: 2px solid #204A37; /* Borde verde oscuro */
+    border-radius: 5px; /* Bordes redondeados */
+    transition: background 0.3s ease, color 0.3s ease, transform 0.3s ease; /* Suave transición */
+    margin-bottom: 15px; /* Espaciado debajo del botón */
+    background-color: rgba(255, 255, 255, 0.8); /* Fondo blanco semitransparente */
+}
+
+.inicio-button:hover {
+    background-color: #204A37; /* Fondo verde oscuro al pasar el mouse */
+    color: #fff; /* Texto blanco */
+    transform: scale(1.05); /* Efecto de aumento */
+}
+
+/*juegos favoritos*/
+
+/* Página de juegos favoritos */
+.juegos-fav-page {
+    background-color: #F9F9F9; 
+    font-family: 'Quicksand', sans-serif;
+    color: #333;
+    text-align: center;
+}
+
+/* Contenedor principal */
+.juegos-main {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
+    padding: 20px;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+/* Diseño de las cartas */
+.card {
+    background-color: #FFFFFF; 
+    border: 2px solid #204A37;
+    border-radius: 10px; /* Bordes redondeados */
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Sombra suave */
+    padding: 20px;
+    width: 300px; /* Ancho fijo */
+    text-align: center;
+    transition: transform 0.3s ease, box-shadow 0.3s ease; /* Suave interacción */
+}
+
+.card:hover {
+    transform: translateY(-5px); /* Eleva la carta */
+    box-shadow: 0 8px 12px rgba(0, 0, 0, 0.2); /* Aumenta la sombra */
+}
+
+/* Estilo de las imágenes */
+.card img {
+    width: 100%; /* Ocupa todo el ancho del contenedor */
+    height: 180px; /* Altura fija */
+    object-fit: cover; /* Ajusta la imagen sin deformarla */
+    border-radius: 8px; /* Bordes redondeados para las imágenes */
+    margin-bottom: 10px;
+}
+
+/* Títulos de los juegos */
+.card h2 {
+    font-size: 22px;
+    color: #204A37;
+    margin-bottom: 10px;
+    font-family: 'Raleway', sans-serif;
+}
+
+/* Párrafos */
+.card p {
+    font-size: 16px;
+    line-height: 1.6;
+    color: #333;
+    font-family: 'Quicksand', sans-serif;
+}

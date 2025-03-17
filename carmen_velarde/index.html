@@ -3,36 +3,52 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>sitios_personales</title>
+    <title>Carmen Velarde</title>
     <link rel="stylesheet" href="estilos/estilos.css">
-
 </head>
 <body>
-    <div>
-        <header>
-            <nav>
-                <ul>
-                    
-                    <li><a href="biografia.html">Ir a la biografía</a></li>
-                    <li><a href="contacto.html">Contacto</a></li>
-                    <li><a href="diariovisual.html">Diario Visual</a></li>
-                    <li><a href="gustos.html">Gustos</a></li>
-                    <li><a href="juegosfav.html">Juegos favoritos</a></li>
-                    <li><a href="referencias.html">Referencias</a></li>
-                    <li><a href="imagenes/">Imágenes</a></li>
-                </ul>
-            </nav>
-        </header>
-    </div>
-</body>
-<body>
+    <!-- Menú de navegación arriba -->
     <header>
-        <me>
-            <h2>
-                <a2> Hola, soy Carmen Gabriela Velarde Bravo </a2>
-            </h2>
-        </me>
+        <nav>
+            <ul class="nav-menu">
+                <li><a href="biografia.html">Biografía</a></li>
+                <li><a href="gustos.html">Gustos</a></li>
+                <li><a href="referencias.html">Inspiraciones y Referencias</a></li>
+                <li><a href="diariovisual.html">Diario Visual</a></li>
+                <li><a href="contacto.html">Contacto</a></li>
+                <li><a href="juegosfav.html">Juegos Favoritos</a></li>
+            </ul>
+        </nav>
     </header>
+
+    <!-- Nombre debajo de los enlaces -->
+    <div class="page-header">
+        <h1>Carmen Velarde</h1>
+    </div>
+
+    <!-- Contenedor del círculo de bienvenida -->
+    <div class="container">
+        <div class="welcome-circle">
+            <h2>Bienvenid@</h2>
+            <p>Explora para conocer más sobre mí, mis intereses y mi trabajo.</p>
+        </div>
+    </div>
+
+    <!-- Script para animaciones -->
+    <script>
+        document.addEventListener("DOMContentLoaded", function () {
+            const welcomeCircle = document.querySelector(".welcome-circle");
+            if (welcomeCircle) {
+                welcomeCircle.classList.add("active");
+            }
+
+            const navMenu = document.querySelector(".nav-menu");
+            if (navMenu) {
+                setTimeout(() => {
+                    navMenu.classList.add("visible");
+                }, 500);
+            }
+        });
+    </script>
 </body>
 </html>
-
