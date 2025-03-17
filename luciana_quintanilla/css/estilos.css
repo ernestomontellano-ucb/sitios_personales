@@ -1,51 +1,389 @@
-
-*{
+* {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
 }
-body{
-    background: rgb(227, 239, 238);
-    font-family: "inter", sans-serif;
+
+body {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+    background-color: rgb(251, 243, 248); 
 }
-.container{
-    width: 1440px;
-    margin: 0 auto;
-    background: wheat;
+
+body {
+    margin: 0;
+    padding: 0;
 }
 
 header{
+    width: 100%;
     padding: 24px;
-    border-bottom: 1px solid rgb(35, 49, 57);
     display: flex;
     justify-content: space-between;
+    background-color: rgba(252, 236, 246, 0);
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 1000;
 }
-header h1{
-    font-family: "inter", sans-serif;
-    font-size: 32px;
+
+header h1 {
+    font-size: 22px;
     font-weight: normal;
 }
-header h1 a{
+
+header h1 a {
     color: black;
     text-decoration: none;
 }
-header h1 a:hover{
-    text-shadow: 2px 2px 0 purple;
-}
 
-header nav ul{
+header nav ul {
     list-style: none;
     display: flex;
 }
-header nav ul li{
-    margin-right: 16px;
+
+header nav ul li {
+    margin-right: 40px;
 }
 
-header nav ul li a{
-    color: black;
+header nav ul li a {
+    color: rgb(255, 255, 255);
+    text-decoration: none;
+    font-size: 22px;
+}
+
+header nav ul li a:hover {
+    color: rgb(170, 195, 193);
+}
+
+.container, .containerp {
+    padding-top: 100px; 
+}
+
+.headersecundario {
+    width: 100%;
+    background-color: rgb(252, 236, 246);
+    position: relative;
+    border-bottom: 5px solid rgb(255, 255, 255);
+    display: flex;
+    justify-content: space-between;
+}
+
+.headersecundario nav ul li a {
+    color: rgb(162, 127, 143);
+    text-decoration: none;
+    font-size: 22px;
+}
+
+.headersecundario nav ul li a:hover {
+    color: rgb(87, 47, 54);
+}
+
+.containerp {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 40px;
+    margin-top: 20px;
+    margin-left: 60px;
+}
+
+.background {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100vh;
+    background-image: url('../imagenes/florfondo.png');
+    background-size: cover;
+    background-position: center;
+    z-index: -1;
+}
+
+.texto1 {
+    font-size: 50px;
+    margin: 0;
+    width: 700px;
+    color: rgb(255, 255, 255);
+    line-height: 1;
+}
+.miimagen1, .texto1 {
+    opacity: 0;
+    transform: translateY(20px);
+    transition: opacity 1s ease, transform 1s ease;
+}
+
+.containerp:hover .miimagen1, .containerp:hover .texto1 {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+.texto4 {
+    font-size: 30px;
+    width: 650px;
+    color: rgb(162, 127, 143);
+    line-height: 1.3;
+    text-align: justify;
+    margin: 50px auto;
+}
+
+img {
+    max-width: 350px;
+    height: 350px;
+    border-radius: 15px;
+}
+
+.contenedori {
+    width: 200px; 
+    height: 200px; 
+    overflow: hidden; 
+    position: relative;
+    display: inline-block;
+    margin-left: 70px;
+    margin-top: 70px;
+}
+
+.contenedori img {
+    width: 100%; 
+    height: auto; 
+    position: absolute;
+    top: 0;
+    left: 0; 
+    transition: transform 0.5s ease-in-out; 
+}
+
+.contenedori:hover img {
+    transform: scale(1.8); 
+}
+
+.contenedorg1, .contenedorg2, .contenedorg3, 
+.contenedorg4, .contenedorg5, .contenedorg6, .contenedorg7 {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    max-width: 900px;
+    object-fit: cover;
+    margin-top: 50px;
+    margin-bottom: 20px;
+    gap: 70px;
+    margin: 40px auto;
+    font-size: 27px;
+    color: rgb(162, 127, 143);
+    line-height: 1.3;
+}
+
+.contenedorg2, .contenedorg4, .contenedorg6 {
+    flex-direction: row-reverse;
+}
+.contenedorg1 img,
+.contenedorg2 img,
+.contenedorg3 img,
+.contenedorg4 img,
+.contenedorg5 img,
+.contenedorg6 img,
+.contenedorg7 img {
+    transition: transform 0.3s ease, filter 0.3s ease; 
+    object-fit: cover;
+    filter: blur(2px);
+}
+
+.contenedorg1:hover img,
+.contenedorg2:hover img,
+.contenedorg3:hover img,
+.contenedorg4:hover img,
+.contenedorg5:hover img,
+.contenedorg6:hover img,
+.contenedorg7:hover img {
+    transform: scale(1.1);
+    filter: blur(0);
+}
+.contenedorr-imagenes {
+    display: inline-block;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+}
+
+.contenedorr {
+    width: 650px;
+    height: 650px;
+    overflow: hidden; 
+    display: inline-block;
+    justify-content: center;
+    align-items: center;
+    margin-left: 220px;
+    margin-right: -250px;
+}
+
+.contenedorr img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain; 
+    transition: transform 0.2s ease; 
+}
+
+.contenedorr:hover img {
+    transform: scale(1.6);
+}
+
+.contenedor {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(550px, 1fr));
+    gap: 20px;
+    padding: 20px;
+}
+
+.contenedordv0, .contenedordv1, .contenedordv2, .contenedordv3, .contenedordv4, .contenedordv5, 
+.contenedordv6, .contenedordv7, .contenedordv8, .contenedordv9, .contenedordv10, .contenedordv11, 
+.contenedordv13, .contenedordv14, .contenedordv15, .contenedordv16, .contenedordv17, .contenedordv18 {
+    display: flex;
+    align-items: center;
+    background-color: #ffffff;
+    border-radius: 1opx;
+    margin-bottom: 30px;
+    box-shadow: rgba(130, 79, 88, 0.2);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 15px;
+    transition: transform 0.3s ease;
+    height: auto;
+}
+
+.valedv, .madv, .rosidv, .dukidv, .gogodv, .emidv, .luffydv, .akridv, .elmaldv, .gusdv, .btdv, 
+.cuartetodv, .venusdv, .perksdv, .tilindv, .cassiedv, .breakingdv, .snoopydv {
+    width: 550px;
+    height: 550px;
+    object-fit: cover;
+    border-radius: 8px;
+    margin-right: 15px;
+    margin-left: 200px;
+    transition: transform 0.3s ease;
+}
+.textodv {
+    font-size: 30px;
+    color: #333;
+    background-color: transparent;
+    padding: 10px;
+    flex: 1;
+    text-align: left;
+    opacity: 1;
+    line-height: 1;
+    transition: transform 0.3s ease, opacity 0.3s ease;
+}
+
+.contenedordv0:hover, 
+.contenedordv1:hover, 
+.contenedordv2:hover,
+.contenedordv3:hover, 
+.contenedordv4:hover, 
+.contenedordv5:hover,
+.contenedordv6:hover, 
+.contenedordv7:hover, 
+.contenedordv8:hover,
+.contenedordv9:hover, 
+.contenedordv10:hover,
+.contenedordv11:hover, 
+.contenedordv13:hover, 
+.contenedordv14:hover,
+.contenedordv15:hover, 
+.contenedordv16:hover,
+.contenedordv17:hover,
+.contenedordv18:hover {
+    transform: scale(1.2);
+}
+
+.contenedordv0:hover img,
+.contenedordv1:hover img,
+.contenedordv2:hover img,
+.contenedordv3:hover img,
+.contenedordv4:hover img,
+.contenedordv5:hover img,
+.contenedordv6:hover img,
+.contenedordv7:hover img,
+.contenedordv8:hover img,
+.contenedordv9:hover img,
+.contenedordv10:hover img,
+.contenedordv11:hover img,
+.contenedordv13:hover img,
+.contenedordv14:hover img,
+.contenedordv15:hover img,
+.contenedordv16:hover img,
+.contenedordv17:hover img,
+.contenedordv18:hover img {
+    transform: scale(1.2);
+}
+
+.contenedorcon {
+    background: #fff;
+    padding: 30px;
+    text-align: center;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+    width: 90%;
+    max-width: 400px;
+    margin-top: 30px;
+    margin-left: 550px;
+}
+
+.contenedorcon h1 {
+    margin-bottom: 10px;
+    font-size: 28px;
+    color: #333;
+}
+
+.contenedorcon p {
+    font-size: 16px;
+    color: #555;
+    margin-bottom: 20px;
+}
+
+.contenedorcon .redes {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.contenedorcon .icono {
     text-decoration: none;
     font-size: 18px;
+    padding: 10px 20px;
+    border-radius: 5px;
+    color: rgb(251, 243, 248);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    font-weight: bold;
+    transition: 0.3s;
 }
-header nav ul li a:hover{
-    color: blue;
-} 
+
+.contenedorcon .icono img {
+    width: 24px;
+    height: 24px;
+}
+
+.contenedorcon .tiktok {
+    background: rgb(61, 33, 68);
+}
+
+.contenedorcon .instagram {
+    background: rgb(87, 47, 54);
+}
+
+.contenedorcon .correo {
+    background: rgb(130, 79, 88);
+}
+
+.contenedorcon .celular {
+    background: rgb(162, 127, 143);
+}
+
+.contenedorcon .icono:hover {
+    transform: scale(1.1);
+    opacity: 0.8;
+}
+
