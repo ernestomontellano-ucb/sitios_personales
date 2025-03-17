@@ -51,27 +51,130 @@ Si algunos colaboradores no ven el botón para hacer el Pull Request (PR) y en s
 1. Saca un backup de tu sitio personal fuera del repositorio. Esto solo es una precaución.
 2. Agrega el upstream (si es que no lo has hecho ya):
 
-´´
+````
 git remote add upstream https://github.com/usuario-original/repo.git
-´´
+````
 3. Actualizar el fork con los cambios del upstream:
 
-´´
+````
 git fetch upstream
-´´
+````
 4. Muévete a tu rama de trabajo:
 
-´´
+````
 git checkout feature-nueva
-´´
+````
 5. Haz merge con la versión más reciente del upstream:
-´´
+````
 git merge upstream/main
-´´
+````
 Acá es donde puede aparecer conflictos que se deben resolver manualmente.
 
 6. Sube los cambios a tu fork:
 
-´´
+````
+git push origin mi_rama
+````
+
+## PASOS PARA RESOLVER CONFLICTOS DESPUÉS DE HACER MERGE CON UPSTREAM/MAIN
+
+Si al ejecutar ``git merge upstream/main`` ves mensajes como:
+
+````
+Auto-merging archivo.txt
+CONFLICT (content): Merge conflict in archivo.txt
+Automatic merge failed; fix conflicts and then commit the result.
+````
+Significa que hay un conflicto que debes resolver.
+
+1. Ver qué archivos tienen conflicto:
+
+````
+git status
+````
+Verás algo como:
+
+````
+On branch feature-nueva
+You have unmerged paths.
+  (fix conflicts and run "git commit")
+  Unmerged paths:
+    both modified:   archivo.txt
+````
+
+Esto indica que ``archivo.txt`` tiene conflicto y debes resolverlo.
+
+2. Abrir los archivos en conflicto
+
+Abre el archivo en VS Code y verás en el código algo como esto:
+
+````
+<<<<<<< HEAD
+Esto es el cambio que hiciste en tu fork.
+=======
+Esto es el cambio que alguien más hizo en upstream/main.
+>>>>>>> upstream/main
+
+````
+Esto significa:
+
+Entre ``<<<<<<< HEAD`` y ``=======`` está tu versión del archivo.
+Entre ``=======`` y ``>>>>>>> upstream/main`` está la versión de upstream/main.
+
+3. Resolver el conflicto manualmente.
+
+Edita el archivo para decidir qué versión conservar o combinar ambas.
+
+4. Marca el conflicto como resuelto.
+
+````
+git add archivo.txt
+o
+git add .
+````
+5. Confirmar los cambios
+
+````
+git commit -m "Resueltos conflictos con upstream/main"
+
+````
+6. Subir los cambios al fork
+
+````
 git push origin feature-nueva
-´´
+
+````
+Ahora si verás el botón PULL REQUEST en Github.
+
+## QUÉ HAGO SI TENGO MUCHOS ARCHIVOS CON CONFLICTOS
+
+Si tienes muchos archivos en conflicto y quieres revisarlos uno por uno, puedes usar:
+
+````
+git diff
+````
+
+O ver un resumen con:
+````
+git status
+````
+Y si decides descartar los cambios de tu fork y quedarte con la versión de upstream/main:
+
+
+````
+git checkout --theirs archivo.txt
+````
+
+O si quieres mantener tus cambios y descartar los de upstream:
+
+````
+git checkout --ours archivo.txt
+````
+
+Después, recuerda hacer:
+
+````
+git add archivo.txt
+git commit -m "Resuelto conflicto en archivo.txt"
+
+````
