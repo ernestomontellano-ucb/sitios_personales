@@ -30,7 +30,7 @@ html, body {
 /*general-----------------------------------------*/
 body {
     font-family: 'Poiret One';
-    background: linear-gradient(to top, #5c3349 0%, #3f1f37 21%, #1b0a24 75%, #0A0614 100%);
+    background: linear-gradient(to top, #552d42 0%, #3f1f37 21%, #1b0a24 75%, #0A0614 100%);
     background-attachment: fixed;
 }
 
@@ -133,7 +133,7 @@ header nav ul li a:hover {
     text-align: center;
     background: rgba(129, 57, 116, 0.2);
     padding: 19vh 5%;  /* para que se adapte a la pantalla de mi compu y de la laptop*/
-    width: 93%;
+    width: 80%;
     margin: 0 auto;
     margin-top: 8%;
     border-radius: 10px;
@@ -194,14 +194,14 @@ header nav ul li a:hover {
     justify-content: center;
     background: rgba(129, 57, 116, 0.2);
     padding: 40px 5%;
-    width: 95%;
+    width: 80%;
     margin: auto;
     border-radius: 10px;
     flex-wrap: wrap; /* permite que el contenido se acomode en columnas en pantallas pequeñas */
 }
 
 .container-sobre-mi img {
-    width: 18%;
+    width: 23%;
     min-width: 200px;
     margin-right: 10%; 
 }
@@ -253,16 +253,16 @@ header nav ul li a:hover {
     justify-content: center;
     background: rgba(129, 57, 116, 0.2);
     padding: 40px 5%;
-    width: 95%;
+    width: 80%;
     margin: auto;
     border-radius: 10px;
-    flex-wrap: wrap;
+    flex-wrap: wrap; /* permite que el contenido se acomode en columnas en pantallas pequeñas */
 }
 
 .container-sobre-perritos img {
-    width: 18%;
+    width: 23%;
     min-width: 200px;
-    margin-left: 5%;
+    margin-left: 10%; 
 }
 
 .container-sobre-perritos p {
@@ -291,45 +291,44 @@ header nav ul li a:hover {
     flex-direction: column;
     align-items: center;
     text-align: center;
-    padding: 40px 5%;
+    padding: 0px 5%;
     width: 95%;
     margin: auto;
     flex-wrap: wrap;
 }
 
 .diario-container img {
-    width: 50%;
-    max-width: 250px;
-    margin: 10%;
+    width: 19%;
+    margin: 0px 30px 30px 30px;
 }
 
 .diario-container p {
     width: 80%;
     text-align: center;
-    font-size: 16px;
+    font-size: 19px;
     line-height: 1.6;
 }
 
 /*rutinix--------------------------------------*/
 .diario-rutina {
     text-align: center;
-    padding: 50px 5%;
+    padding: 30px 5%;
     color: #F5E3CD;
-    margin-top: 40px;
+    margin-top: 15px;
 }
 
 .diario-rutina-container {
     display: flex;
     align-items: center;
     justify-content: center;
-    gap: 10%; /* Espaciado entre el texto y la imagen */
+    gap: 6%; /* Espaciado entre el texto y la imagen */
 }
 
 .diario-rutina-texto {
     background: rgba(129, 57, 116, 0.2);
     padding: 40px;
-    border-radius: 10px;
-    width: 40%;
+    border-radius: 15px;
+    width: 30%;
     text-align: center;
 }
 
@@ -339,9 +338,413 @@ header nav ul li a:hover {
 }
 
 .diario-rutina-imagen img {
-    width: 300px; /* Ajusta el tamaño de la imagen */
+    width: 550px; /* Ajusta el tamaño de la imagen */
     max-width: 100%;
     filter: brightness(0.8);
+}
+
+/*inspiraciones--------------------------------------*/
+.inspiracion {
+    text-align: center;
+    padding: 28px 28px;
+    color: #F5E3CD;
+    margin-top: 80px;
+}
+    
+.inspiracion h2 {
+    font-size: 40px;
+    font-weight: 300;
+    margin-bottom: 2px;
+}
+
+.botones-ins {
+    display: flex;
+    justify-content: center;
+    gap: 26px;
+    font-size: 17px;
+    padding: 0px 10px;
+    text-align: center;
+    margin-top: 40px;
+}
+
+.container-botones-ins {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 2px;
+    text-decoration: none; /* Quitar subrayado en enlaces */
+    transition: transform 0.3s ease-in-out;
+}
+
+.container-botones-ins p {
+    color: #F5E3CD;
+    margin-top: 16px;
+}
+
+.container-botones-ins img {
+    margin: 0;
+    width: 200px; /*auxilio si no se ven muy separados*/
+    display: block;
+    border-radius: 10px;
+    transition: transform 0.3s ease-in-out;
+}
+
+.container-botones-ins:hover img {
+    transform: scale(1.1); /* Efecto de agrandamiento */
+}
+
+.admiracion-estandar {
+    scroll-margin-top: 80px; /* Ajusta según el tamaño del header */
+}
+
+/*admiracion estandar--------------------------------------*/
+.admiracion-estandar {
+    text-align: center;
+    padding: 28px 28px;
+    color: #F5E3CD;
+    margin-top: 40px;
+}
+
+.admiracion-estandar h2 {
+    font-size: 33px;
+    font-weight: 300;
+    margin-bottom: 2px;
+}
+
+.admiracion-estandar h3 {
+    font-size: 24px;
+    font-weight: 300;
+    margin-bottom: 10px;
+}
+
+.admiracion-estandar a {
+    text-decoration: none; /* Eliminar subrayado */
+    color: #F5E3CD;
+}
+
+.admiracion-estandar h4 {
+    font-size: 18px;
+    font-weight: 300;
+    margin-bottom: 30px;
+}
+
+.container-admiracion-estandar {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: rgba(129, 57, 116, 0.2);
+    padding: 40px 6%;
+    width: 80%;
+    margin: auto;
+    border-radius: 10px;
+    flex-wrap: wrap;
+}
+
+.container-admiracion-estandar img {
+    max-width: 40%;
+    border-radius: 10px;
+    margin-bottom: 20px;
+    margin-right: 10%; 
+}
+
+.container-admiracion-estandar p {
+    text-align: justify;
+    font-size: 16px;
+    line-height: 1.6;
+    width: 50%;
+}
+
+.container-admiracion-estandar-izquierda {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: rgba(129, 57, 116, 0.2);
+    padding: 40px 6%;
+    width: 80%;
+    margin: auto;
+    border-radius: 10px;
+    flex-wrap: wrap;
+}
+
+.container-admiracion-estandar-izquierda img {
+    max-width: 40%;
+    border-radius: 10px;
+    margin-bottom: 20px;
+    margin-left: 10%; 
+}
+
+.container-admiracion-estandar-izquierda p {
+    text-align: justify;
+    font-size: 16px;
+    line-height: 1.6;
+    width: 50%;
+}
+
+/*ozzu y kei--------------------------------------*/
+.ozzu-kei-textos {
+    display: flex;
+    flex-direction: column; 
+    gap: 20px;
+    width: 50%;
+}
+
+.ozzu-kei-textos-bloques h5 {
+    font-size: 20px;
+    text-align: justify;
+    font-weight: 300;
+    margin-bottom: 10px;
+}
+
+.ozzu-kei-textos-bloques p {
+    text-align: justify;
+    font-size: 16px;
+    line-height: 1.6;
+    width: 100%;
+}
+
+/*galeria--------------------------------------*/
+.titulos {
+    text-align: center;
+    padding: 28px 0px 0px 0px;
+    color: #F5E3CD;
+    margin-top: 70px;
+}
+
+.galeria-titulos h2{
+    font-size: 40px;
+    font-weight: 300;
+    margin-bottom: 9px;
+}
+.galeria-titulos h3 {
+    font-size: 28px;
+    font-weight: 300;
+    margin-bottom: 9px;
+}
+
+/* 🔹 Galería */
+.galeria {
+    column-count: 3; /* Número de columnas */
+    column-gap: 15px; /* Espacio entre columnas */
+    text-align: center;
+    padding: 28px;
+    color: #F5E3CD;
+    margin-top: 20px;
+    max-width: 70%;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+/* 🔹 Cada imagen */
+.galeria-container {
+    background: rgba(255, 255, 255, 0.1);
+    padding: 10px;
+    border-radius: 10px;
+    overflow: hidden;
+    width: 100%;
+    display: inline-block;
+    margin-bottom: 15px;
+}
+
+/* 🔹 Imágenes */
+.galeria-container img {
+    width: 100%;
+    height: auto;
+    border-radius: 8px;
+    display: block;
+}
+
+/* 🔹 Texto descriptivo */
+.galeria-text {
+    font-size: 0.9em;
+    color: #F5E3CD;
+    opacity: 0.8;
+    margin-top: 5px;
+}
+
+/*videos--------------------------------------*/
+.video-section {
+    text-align: center;
+    margin: 50px 0;
+}
+
+.video-title-section {
+    font-size: 40px;
+    font-weight: 300;
+    color: #F5E3CD;  /* Color que deseas para el título */
+    margin-bottom: 40px;
+    padding: 28px 28px;
+}
+
+.video-container {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 40px;
+    margin-bottom: 20px;
+}
+
+.video-item {
+    flex-basis: 32%; /* Esto permite que los videos tengan un ancho flexible y se ajusten */
+    max-width: 600px; /* Limita el tamaño máximo */
+    margin-bottom: 20px; /* Espacio entre los videos verticalmente */
+}
+
+.video {
+    width: 100%;
+    border-radius: 10px;
+}
+
+.video-title {
+    position: absolute;
+    top: 10px;
+    left: 50%;
+    transform: translateX(-50%);
+    font-size: 18px;
+    color: white;
+    background-color: rgba(0, 0, 0, 0.5);
+    padding: 10px 20px;
+    border-radius: 5px;
+    z-index: 10;
+}
+
+/*contacto--------------------------------------*/
+.contacto {
+    text-align: center;
+    padding: 28px 28px;
+    color: #F5E3CD;
+    margin-top: 70px;
+}
+
+.contacto h2 {
+    font-size: 40px;
+    font-weight: 300;
+}
+
+.contacto-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    padding: 40px 5%;
+    width: 90%;
+    margin: auto;
+    flex-wrap: wrap;
+}
+
+.contacto-container h3 {
+    width: 80%;
+    font-weight: 300;
+    text-align: center;
+    font-size: 16px;
+    line-height: 1.6;
+}
+
+.contacto-container img {
+    width: 22%;
+    margin: 3% 0px 1% 0px;
+    border-radius: 10px;
+}
+
+.contacto-container img {
+    transition: transform 0.3s ease-in-out;
+}
+
+.contacto-container img:hover {
+    transform: scale(1.1);
+}
+
+.contacto-container p {
+    width: 80%;
+    text-align: center;
+    font-size: 13px;
+    line-height: 1.6;
+}
+
+.email {
+    text-align: center;
+    padding: 30px 5%;
+    color: #F5E3CD;
+    margin-top: 0px;
+}
+
+.email-container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 40px 5%;
+    width: 80%;
+    margin: auto;
+    flex-wrap: wrap;
+    background: rgba(129, 57, 116, 0.2);
+    border-radius: 5px;
+}
+
+.email-info {
+    width: 40%;
+    text-align: left;
+}
+
+.email-info h2 {
+    font-size: 28px;
+    font-weight: 300;
+    margin-bottom: 10px;
+}
+
+.email-info img {
+    width: 60%;
+    margin: 20px 0;
+    border-radius: 10px;
+}
+
+.email-info p {
+    font-size: 14px;
+    margin: 5px 0;
+}
+
+.email-form {
+    width: 60%;
+    display: flex;
+    flex-direction: column;
+}
+
+.input-group {
+    display: flex;
+    justify-content: space-between;
+    gap: 10px; /* Aumenta este valor para más espacio */
+}
+
+.input-group input {
+    width: 48%;
+}
+
+.email-form input, /*para que cambie de aspecto*/
+.email-form textarea {
+    width: 100%;
+    padding: 10px;
+    margin: 8px 0;
+    border: none;
+    border-radius: 5px;
+    background: rgba(233, 229, 229, 0.1);
+    color: #F5E3CD;
+}
+
+.email-form textarea {
+    height: 100px;
+    resize: none;
+}
+
+.email-form button {
+    padding: 10px;
+    border: none;
+    border-radius: 10px;
+    background: #683852;
+    color: #F5E3CD;
+    cursor: pointer;
+    transition: background 0.3s;
+}
+
+.email-form button:hover {
+    background: #662b57;
 }
 
 /*foother--------------------------------------*/
