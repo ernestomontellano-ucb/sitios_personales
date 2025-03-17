@@ -41,3 +41,37 @@ git merge upstream/main
 git checkout ernesto_montellano
 git merge main
 ```
+
+## RESOLUCIÓN DE CONFLICTOS EN PULL REQUEST SIN PERDER CAMBIOS
+
+Si algunos colaboradores no ven el botón para hacer el Pull Request (PR) y en su lugar ven un mensaje como "Esta rama está atrasada por XX commits", significa que su fork no está actualizado con el repositorio upstream.
+
+### SINCRONIZAR CON MERGE
+
+1. Saca un backup de tu sitio personal fuera del repositorio. Esto solo es una precaución.
+2. Agrega el upstream (si es que no lo has hecho ya):
+
+´´
+git remote add upstream https://github.com/usuario-original/repo.git
+´´
+3. Actualizar el fork con los cambios del upstream:
+
+´´
+git fetch upstream
+´´
+4. Muévete a tu rama de trabajo:
+
+´´
+git checkout feature-nueva
+´´
+5. Haz merge con la versión más reciente del upstream:
+´´
+git merge upstream/main
+´´
+Acá es donde puede aparecer conflictos que se deben resolver manualmente.
+
+6. Sube los cambios a tu fork:
+
+´´
+git push origin feature-nueva
+´´
