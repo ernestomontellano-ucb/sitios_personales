@@ -1,175 +1,96 @@
-* {
+/* Estilos generales */
+body {
+    font-family: 'Poppins', sans-serif;
+    background-color: #f5f5f5;
+    color: #333;
     margin: 0;
     padding: 0;
-    box-sizing: border-box;
 }
 
-body {
-    font-family: 'Inter', sans-serif;
-    background-color: #F2F2F2;
-    color: #191919;
-    line-height: 1.6;
-}
-
-header {
+/* Header y Footer */
+header, footer {
     background-color: #84B0C5;
-    padding: 40px 0;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    color: #000;
+    text-align: center;
+    padding: 15px 0;
 }
 
-header nav ul {
+nav ul {
     list-style: none;
+    padding: 0;
+    margin: 0;
     display: flex;
     justify-content: center;
-    gap: 50px;
+    gap: 20px;
 }
 
-header nav ul li {
-    margin: 0;
-}
-
-header nav ul li a {
+nav ul li a {
     text-decoration: none;
-    color: #191919;
-    font-size: 1.2rem;
-    font-weight: 700;
-    text-transform: uppercase;
-    padding: 12px 20px;
-    border-radius: 30px;
-    position: relative;
-    transition: all 0.3s ease;
+    color: #000;
+    font-weight: bold;
+    transition: color 0.3s;
 }
 
-header nav ul li a::after {
-    content: "";
-    position: absolute;
-    left: 50%;
-    bottom: 0;
-    width: 0;
-    height: 3px;
-    background-color: #78B49D;
-    transition: all 0.3s ease;
-    transform: translateX(-50%);
+nav ul li a:hover {
+    color: #fff;
 }
 
-header nav ul li a:hover {
-    color: #FFFFFF;
-    background-color: #78B49D;
-}
-
-header nav ul li a:hover::after {
-    width: 100%;
-}
-
+/* Estilos principales */
 main {
-    padding: 80px 15%;
-}
-
-h1 {
-    font-size: 3.5rem;
-    font-weight: 800;
-    color: #191919;
-    text-align: center;
-    margin-bottom: 50px;
-    letter-spacing: 1px;
-}
-
-h2 {
-    font-size: 2.5rem;
-    font-weight: 700;
-    color: #78B49D;
-    text-transform: uppercase;
-    margin-bottom: 30px;
-    letter-spacing: 1px;
+    width: 90%;
+    max-width: 1200px;
+    margin: 20px auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 }
 
 section {
-    margin-bottom: 80px;
-    padding: 40px;
-    background-color: #FFFFFF;
-    border-radius: 20px;
-    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
-    transition: all 0.3s ease;
-}
-
-section:hover {
-    transform: translateY(-5px);
-    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.15);
-}
-
-article {
-    margin-bottom: 40px;
-}
-
-footer {
-    background-color: #84B0C5;
-    color: #191919;
+    background-color: #e0e0e0;
+    padding: 20px;
+    margin: 20px 0;
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
     text-align: center;
-    padding: 30px;
-    font-size: 1.1rem;
-    position: relative;
+    width: 100%;
+    max-width: 800px;
 }
 
-footer a {
-    color: #191919;
+/* Títulos y Subtítulos */
+h1 {
+    color: #78B49D;
+}
+
+h2 {
+    color: #84B0C5;
+}
+
+h3 {
+    color: #78B49D;
+}
+
+/* Imágenes */
+img {
+    width: 200px;
+    height: 200px;
+    object-fit: cover;
+    border-radius: 10px;
+    transition: transform 0.3s ease-in-out;
+    margin: 10px 0;
+}
+
+img:hover {
+    transform: scale(1.1);
+}
+
+/* Botones y enlaces */
+.contact-link, .leer-mas {
+    color:  #78B49D;
+    font-weight: bold;
     text-decoration: none;
-    font-weight: 700;
-    position: relative;
     transition: color 0.3s ease;
 }
 
-footer a:hover {
-    color: #FFFFFF;
-    background-color: #78B49D;
-    padding: 10px 20px;
-    border-radius: 25px;
-}
-
-button {
-    background-color: #78B49D;
-    color: #FFFFFF;
-    font-size: 1.2rem;
-    padding: 16px 36px;
-    border: none;
-    border-radius: 50px;
-    cursor: pointer;
-    transition: all 0.3s ease;
-}
-
-button:hover {
-    background-color: #84B0C5;
-    transform: translateY(-3px);
-}
-
-button:focus {
-    outline: none;
-}
-
-section .contacto-formulario {
-    display: flex;
-    flex-direction: column;
-    gap: 25px;
-}
-
-section .contacto-formulario input,
-section .contacto-formulario textarea {
-    padding: 18px;
-    font-size: 1.1rem;
-    border-radius: 10px;
-    border: 1px solid #E1E1E1;
-    transition: border-color 0.3s ease;
-}
-
-section .contacto-formulario input:focus,
-section .contacto-formulario textarea:focus {
-    border-color: #84B0C5;
-    outline: none;
-}
-
-section .contacto-formulario button {
-    width: 100%;
-}
-
-.main_metas h2, .main_rutinas h2, .main_contacto h2 {
-    color: #78B49D;
+.contact-link:hover, .leer-mas:hover {
+    color:  #78B49D;
 }

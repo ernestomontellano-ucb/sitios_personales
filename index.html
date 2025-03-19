@@ -3,13 +3,170 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>SITIOS PERSONALES</title>
+    <title>Fernanda Gonzales</title>
     <link rel="stylesheet" href="estilos/estilos.css">
+    <style>
+        .imagen {
+            width: 100%;
+            max-width: 250px;
+            margin: 0 auto;
+            display: block;
+            border-radius: 50%;
+        }
+
+        .contenedor {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-between;
+            gap: 20px;
+        }
+
+        .index_parte1_texto {
+            flex: 1;
+            max-width: 60%;
+            padding: 20px;
+        }
+
+        .index_parte1 .contenedor {
+            justify-content: center;
+        }
+
+        h1, h2 {
+            color: #84B0C5;
+        }
+
+        .contenido {
+            display: flex;
+            flex-direction: row;
+            align-items: center;
+            gap: 20px;
+            margin-bottom: 30px;
+        }
+
+        .contenido .texto {
+            flex: 1;
+        }
+
+        .index_parte2 {
+            margin: 40px 0;
+        }
+
+        footer {
+            background-color: #F2F2F2;
+            padding: 20px;
+            text-align: center;
+            color: #191919;
+        }
+
+        footer p {
+            font-size: 14px;
+            margin: 0;
+        }
+
+        .boton {
+            background-color: #84B0C5;
+            color: white;
+            padding: 10px 20px;
+            text-decoration: none;
+            border-radius: 5px;
+            display: inline-block;
+            margin-top: 10px;
+        }
+
+        @media (max-width: 768px) {
+            .contenedor {
+                flex-direction: column;
+                text-align: center;
+            }
+
+            .index_parte1_texto {
+                max-width: 100%;
+            }
+
+            .contenido {
+                flex-direction: column;
+            }
+
+            .imagen {
+                margin-bottom: 20px;
+            }
+        }
+    </style>
 </head>
 <body>
-    <h1>SITIOS PERSONALES</h1>
-    <ul>
-        <li><a href="pablo_lobaton/">Pablo Lobaton</a></li>
-    </ul>
+    <header>
+        <nav>
+            <ul>
+                <li><a href="biografia/biografia.html">Biografía</a></li>
+                <li><a href="contacto/contacto.html">Contacto</a></li>
+                <li><a href="curiosidades/curiosidades.html">Curiosidades</a></li>
+                <li><a href="gustos/gustos.html">Gustos</a></li>
+                <li><a href="metas/metas.html">Metas</a></li>
+                <li><a href="rutinas/rutinas.html">Rutinas</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main class="main_index">
+        <section class="index_parte1">
+            <div class="contenedor">
+                <div class="index_parte1_texto">
+                    <h1>Fernanda Gonzales</h1>
+                    <p>¡Bienvenido a mi rincón en la web! Soy Fernanda Gonzales y estoy muy emocionada de que estés aquí. Este sitio es más que una presentación; es un reflejo de mis sueños, pasiones y proyectos. Quiero compartir contigo lo que me inspira y me impulsa cada día. ¿Tienes curiosidad por saber más? ¡Vamos a descubrirlo juntos!</p>
+                    <a href="biografia/biografia.html" class="boton">Leer más</a>
+                </div>
+                <div class="imagen">
+                    <img src="imagenes/Foto mia index.jpeg" alt="Fotografía mia">
+                </div>
+            </div>
+        </section>
+
+        <section class="index_parte2">
+            <h2>Personas importantes para mí</h2>
+            <article>
+                <h3>Mi familia y amigos</h3>
+                <p>Mi familia está compuesta por cinco personas: mi papá, Luis Fernando; mi mamá, Siria; mi hermana mayor, Valeria; mi hermana menor, Luciana; y yo. También tenemos dos mascotas, Chester y Mar, quienes son parte de nuestra familia. Mis mejores amigos son Mari y Bequer.</p>
+            </article>
+        </section>
+
+        <section class="index_parte3">
+            <h2>Lo más importante para mí</h2>
+            <article class="contenido">
+                <div class="imagen">
+                    <img src="imagenes/Foto teclas piano index.jpeg" alt="Teclas de piano">
+                </div>
+                <div class="texto">
+                    <h3>Música</h3>
+                    <p>La música siempre ha estado en mi vida. Desde los siete años toco el piano y he tomado clases de música, algo que me encanta. Ahora enseño a niños pequeños y disfruto compartir mi conocimiento con ellos.</p>
+                </div>
+            </article>
+
+            <article class="contenido">
+                <div class="imagen">
+                    <img src="imagenes/Foto diseño index.jpeg" alt="Pantalla de computadora">
+                </div>
+                <div class="texto">
+                    <h3>Diseño</h3>
+                    <p>Comencé a estudiar diseño en agosto de 2023 y amo mi carrera, aunque la parte de programación me resulta un reto. Me esfuerzo por aprender, porque me apasiona la idea de ofrecer soluciones visuales y crear diseños innovadores.</p>
+                </div>
+            </article>
+
+            <article class="contenido">
+                <div class="imagen">
+                    <img src="imagenes/Foto atletismo index.jpeg" alt="Sombra atletismo">
+                </div>
+                <div class="texto">
+                    <h3>Atletismo</h3>
+                    <p>El atletismo es el único deporte que me gusta practicar. Soy rápida y resistente, y a lo largo de mi vida he ganado varias medallas. Aunque ya no lo practico con la misma frecuencia, sigo teniendo disciplina y amor por este deporte.</p>
+                </div>
+            </article>
+        </section>
+    </main>
+
+    <footer>
+        <p>© 2025 Fernanda Gonzales. Todos los derechos reservados.</p>
+    </footer>
 </body>
 </html>
+
+
