@@ -1,0 +1,55 @@
+body{
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+/*Cabezera*/
+header{
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 24px;
+    background-color: aquamarine;
+}
+header .Logo{
+    background-color: aliceblue;
+    width: 150px;
+    height: 50px;
+}
+header nav ul li{
+    display: inline-block;
+    margin-right: 16px;
+}
+header nav ul li:last-child{
+    margin-right: 0;
+}
+/*Contenido Principal*/
+main{
+    width: 75%;
+    padding: 24px;
+    display: flex;
+    margin: 0 auto;
+}
+.cont-img{
+    width: 950px;
+    height: 250px;
+    background-color: bisque;
+    margin-left: 75px;
+}
+.buton1{
+    margin-top: 50px;
+}
+.buton1 button{
+    padding: 10px 25px;
+    background-color: aquamarine;
+    color: black;
+    border: 1px solid transparent;
+    border-radius: 13px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+.buton1 button:hover{
+    background-color: rgb(40, 93, 75);
+    color: white;
+}
+
+
