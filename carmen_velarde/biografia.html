@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Biografía- Carmen Velarde</title>
+    <link rel="stylesheet" href="estilos/estilos.css">
+</head>
+<body>
+    <header>
+        <nav>
+            <ul class="nav-menu">
+                <li><a href="index.html">Inicio</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <header class="bio-header">
+        <h1>BIOGRAFÍA</h1>
+        
+    </header>
+
+    <main class="bio-main">
+        <div class="card">
+            <img src="imagenes/nombre.jpg" alt="Foto de Carmen Velarde">
+            <p class="card-title">Mi Nombre</strong</p>
+            <div class="card-content">
+                <p>Mi nombre completo es Carmen Gabriela Velarde Bravo.</p>
+            </div>
+        </div>
+
+        <div class="card">
+            <img src="imagenes/edad.webp" alt="Imagen representando la edad">
+            <p class="card-title">Mi Edad</p>
+            <div class="card-content">
+                <p>Tengo 22 años y cumplo este año 23.</p>
+            </div>
+        </div>
+
+        <div class="card">
+            <img src="imagenes/ubicacion.jpg" alt="Imagen de Bolivia">
+            <p class="card-title">Mi Ubicación</p>
+            <div class="card-content">
+                <p>Vivo y naci en La Paz que se encuentra en BOLIVIA.</p>
+            </div>
+        </div>
+
+        <div class="card">
+            <img src="imagenes/carrera.jpg" alt="Imagen sobre Diseño Digital">
+            <p class="card-title">Que estudio</p>
+            <div class="card-content">
+                <p>Estudio la carrera de Diseño Digital voy en 4to semestre de la carrera, escogi esta carrera porque me atrajo la idea de animacion y paginas web .</p>
+            </div>
+        </div>
+    </main>
+
+    <script>
+        document.querySelectorAll(".card").forEach((card) => {
+            const title = card.querySelector(".card-title");
+            title.addEventListener("click", () => {
+                card.classList.toggle("expanded");
+            });
+        });
+    </script>
+</body>
+</html>

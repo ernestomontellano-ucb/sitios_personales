@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Inspiraciones - Carmen Velarde</title>
+    <link rel="stylesheet" href="estilos/estilos.css">
+</head>
+<body class="inspiraciones-page">
+    <header class="inspiraciones-header">
+        <nav>
+            <a href="index.html" class="inicio-button">Inicio</a>
+        </nav>
+        <h1>Inspiraciones y Referencias</h1>
+    </header>
+    <main class="inspiraciones-container">
+        <div class="texto">
+            <p>Mis mascotas y familia son lo más importante para mí y me inspiran constantemente. Los juegos y la música también son una gran fuente de inspiración en mi trabajo, el clima que más me gusta es la lluvia o que esté nublado, me gusta que se combine con los verdes de la naturaleza haciéndome sentir calma.</p>
+        </div>
+        <div class="imagen-circulo">
+            <img src="imagenes/inspiracion.jpg" alt="Inspiración">
+        </div>
+        <!-- Botón para mostrar/ocultar -->
+        <button id="toggle-section" class="show-section-button">Mostrar Mis Mascotas y Viajes</button>
+        <div id="content-section" class="seccion-mascotas-viajes hidden">
+            <h2>Mis Mascotas</h2>
+            <div class="imagenes-contenedor">
+                <div class="imagen-contenido">
+                    <img src="imagenes/mascota1.jpeg" alt="Mascota 1">
+                    <p>Mis tres perritos la Reina, el Kobu y el Nashiro son mi compañia con los que mas ando y convivo me ayudan a estar tranquila.</p>
+                </div>
+                <div class="imagen-contenido">
+                    <img src="imagenes/mascota2.jpeg" alt="Mascota 2">
+                    <p>Mis otras dos mascotas son mi gatita Ginebra que aunque no me suelo llevar bien aparece para dar compañia y mi caballo Mufasa que aunque es terco es muy cariñoso aunque no sabe medir su fuerza.</p>
+                </div>
+            </div>
+            <h2>Mis Viajes que me marcaron</h2>
+            <div class="imagenes-contenedor">
+                <div class="imagen-contenido">
+                    <img src="imagenes/viaje1.jpeg" alt="Viaje 1">
+                    <p>Un viaje inolvidable en el que pude ver mis fantasias hechas realidad, viajar a orlando fue una experiencia muy divertida y extrema para mi enseñandome que no se vive dos veces.</p>
+                </div>
+                <div class="imagen-contenido">
+                    <img src="imagenes/viaje2.jpeg" alt="Viaje 2">
+                    <p>Ver la cultura de Mexico y la inmensidad de la ciudad me hizo ver que somos un pais muy pequeño pero que estamos lejos de contaminar como ellos lo hacen, aprendi mucho especialmente en el dia de los muertos que es como todos santos.</p>
+                </div>
+            </div>
+        </div>
+    </main>
+    <script>
+        document.addEventListener("DOMContentLoaded", function() {
+            const button = document.getElementById("toggle-section");
+            const section = document.getElementById("content-section");
+
+            // Verifica si el botón y la sección existen
+            if (button && section) {
+                button.addEventListener("click", function() {
+                    section.classList.toggle("hidden");
+
+                    // Actualiza el texto del botón
+                    button.textContent = section.classList.contains("hidden")
+                        ? "Mostrar Mis Mascotas y Viajes"
+                        : "Ocultar Mis Mascotas y Viajes";
+                });
+            }
+        });
+    </script>
+</body>
+</html>
