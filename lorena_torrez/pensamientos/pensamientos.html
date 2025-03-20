@@ -1,13 +1,422 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>pensamientos</title>
-    <link rel="stylesheet" href="estilos/estilos.css">
-    <script src="funciones/funciones.js"></script>
+    <title>Diario Personal</title>
+    <link href="https://fonts.googleapis.com/css2?family=Poiret+One&display=swap" rel="stylesheet"> <!-- tipografia -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"> <!-- iconos -->
+    <link rel="stylesheet" href="../estilos/estilos.css">
+    <link rel="stylesheet" href="style.css"> <!-- estrellitas -->
+    <script src="../funciones/funciones.js"></script>
 </head>
 <body>
+    <div class="container">
+        <header>
+            <div class="logo">
+                <a href="../index.html">
+                    <img src="../imagenes/logix_provicional.png" alt="Logo">
+                </a>
+            </div>
+            <h1><a href="../index.html">Lorena</a></h1>
+            <nav>
+                <ul>
+                    <li><a href="../biografia/biografia.html">Sobre mí</a></li>
+                    <li><a href="../diario_visual/diario_visual.html">Diario visual</a></li>
+                    <li><a href="../inspiraciones/inspiraciones.html">Ídolos</a></li>
+                    <li><a href="../pensamientos/pensamientos.html">Mi esquina</a></li>
+                    <li><a href="../obsesion/obsesion.html">Obsesiones</a></li>
+                    <li><a href="../contacto/contacto.html">Contacto</a></li>
+                </ul>
+            </nav>
+        </header>
+    </div>
+    <div class="sky">
+        <div class="stars"></div>
+        <div class="comet"></div>
+        <div class="moving-stars"></div>
+        <div class="moon" id="moon"></div>
+        <div class="phrase"></div>
+    </div>
+
+    <section id="indice" class="titulos fade-in">
+        <div class="container-titulos">
+            <h2>Mi esquina</h2>
+            <h3>Dibujitos</h3>
+        </div>
+    </section>
     
+    <section class="galeria fade-in">
+        <div class="galeria-container">
+            <img src="../imagenes/yoasobi.png" alt="Descripción 1" loading="lazy">
+            <p class="galeria-text">Primer semestre be like owo</p>
+        </div>
+
+        <div class="galeria-container">
+            <img src="../imagenes/answer.png" alt="Descripción 3" loading="lazy">
+            <p class="galeria-text">Videitos viejos</p>
+        </div>
+
+        <div class="galeria-container">
+            <img src="../imagenes/herizoestrellado.png" alt="Descripción 3" loading="lazy">
+            <p class="galeria-text">Haciendo esto se me fue la luz</p>
+        </div>
+
+        <div class="galeria-container">
+            <img src="../imagenes/fotonofoto.png" alt="Descripción 3" loading="lazy">
+            <p class="galeria-text">Hasta mis amigos me explotan unu</p>
+        </div>
+
+        <div class="galeria-container">
+            <img src="../imagenes/concurso.png" alt="Descripción 3" loading="lazy">
+            <p class="galery-text">Spoiler obvio no gane xd</p>
+        </div>
+
+        <div class="galeria-container">
+            <img src="../imagenes/spoiler.png" alt="Descripción 3" loading="lazy">
+            <p class="galeria-text">No la conozco xd</p>
+        </div>
+
+        <div class="galeria-container">
+            <img src="../imagenes/gorro.png" alt="Descripción 3" loading="lazy">
+            <p class="galeria-text">Tanto que me costo ponerselo</p>
+        </div>
+
+        <div class="galeria-container">
+            <img src="../imagenes/fondontx 2.png" alt="Descripción 3" loading="lazy">
+            <p class="galeria-text">Tanto tiempo yaaaaa ha pasadoooo xd</p>
+        </div>
+
+        <div class="galeria-container">
+            <img src="../imagenes/fotis.png" alt="Descripción 3" loading="lazy">
+            <p class="galeria-text">Esto nunca paso owo/p>
+        </div>
+
+        <div class="galeria-container">
+            <img src="../imagenes/florees.png" alt="Descripción 3" loading="lazy">
+            <p class="galeria-text">Me gusta el rosado uwu</p>
+        </div>
+
+        <div class="galeria-container">
+            <img src="../imagenes/friendos.png" alt="Descripción 3" loading="lazy">
+            <p class="galeria-text">JUST BE FRIEND</p>
+        </div>
+
+        <div class="galeria-container">
+            <img src="../imagenes/adelanto.png" alt="Descripción 3" loading="lazy">
+            <p class="galeria-text">Dormidito</p>
+        </div>
+
+        <div class="galeria-container">
+            <img src="../imagenes/gato.png" alt="Descripción 3" loading="lazy">
+            <p class="galeria-text">Quisiera ser un gato para momir todo el día</p>
+        </div>
+
+        <div class="galeria-container">
+            <img src="../imagenes/recemos.png" alt="Descripción 3" loading="lazy">
+            <p class="galeria-text">Amen hermano amen</p>
+        </div>
+
+        <div class="galeria-container">
+            <img src="../imagenes/spider.png" alt="Descripción 3" loading="lazy">
+            <p class="galeria-text">siempre me chulean esta ilustracion y no se porque si la pata esta en diciembre</p>
+        </div>
+
+        <div class="galeria-container">
+            <img src="../imagenes/regaloDo.png" alt="Descripción 3" loading="lazy">
+            <p class="galeria-text">Ni se porque hice esto pero me guto pintarlo, nunca habia jugado con las luces fue un buen punto de partida</p>
+        </div>
+
+        <div class="galeria-container">
+            <img src="../imagenes/tiamu.png" alt="Descripción 3" loading="lazy">
+            <p class="galeria-text">LEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEN!</p>
+        </div>
+
+        <div class="galeria-container">
+            <img src="../imagenes/pato.png" alt="Descripción 3" loading="lazy">
+            <p class="galeria-text">Solía ver a las hormigas que subían por mi ventana, ahora las ve un pato cuak</p>
+        </div>
+
+        <div class="galeria-container">
+            <img src="../imagenes/casicasi.png" alt="Descripción 3" loading="lazy">
+            <p class="galeria-text">LA VIDA ME PIDE A GRITOS QUE ACABE CONMIGO OWO</p>
+        </div>
+
+        <div class="galeria-container">
+            <img src="../imagenes/caida.png" alt="Descripción 3" loading="lazy">
+            <p class="galeria-text">Mismo video viejito que hice por puro amor al arte efjnefjk</p>
+        </div>
+
+        <div class="galeria-container">
+            <img src="../imagenes/pena.png" alt="Descripción 3" loading="lazy">
+            <p class="galeria-text">NO LO VEAAAAAAN</p>
+        </div>
+
+        <div class="galeria-container">
+            <img src="../imagenes/Sorpresita.png" alt="Descripción 3" loading="lazy">
+            <p class="galeria-text">Adopteme señorita miel!</p>
+        </div>
+
+        <div class="galeria-container">
+            <img src="../imagenes/okko.png" alt="Descripción 3" loading="lazy">
+            <p class="galeria-text">Era para un trabajo, pero me gusto como salio la linea</p>
+        </div>
+
+        <div class="galeria-container">
+            <img src="../imagenes/niñitos.png" alt="Descripción 3" loading="lazy">
+            <p class="galeria-text">Pobre senior...tiene un problemas serio en la piel y la otra ni lo pela xd</p>
+        </div>
+
+        <div class="galeria-container">
+            <img src="../imagenes/Joker.png" alt="Descripción 3" loading="lazy">
+            <p class="galeria-text">Ufash recuerdo este trabajo...pobre señora tiene el cuello roto xd</p>
+        </div>
+
+        <div class="galeria-container">
+            <img src="../imagenes/chillemos.png" alt="Descripción 3" loading="lazy">
+            <p class="galeria-text">video viejo RECICLEMOS jdfbnfjk</p>
+        </div>
+
+        <div class="galeria-container">
+            <img src="../imagenes/morir.png" alt="Descripción 3" loading="lazy">
+            <p class="galeria-text">Caidas al abismo hice miles, pero solo esta la digitalice por procrastinar owo</p>
+        </div>
+
+        <div class="galeria-container">
+            <img src="../imagenes/mikus.png" alt="Descripción 3" loading="lazy">
+            <p class="galeria-text">Come puerros le decían xd</p>
+        </div>
+
+        <div class="galeria-container">
+            <img src="../imagenes/locuuura.png" alt="Descripción 3" loading="lazy">
+            <p class="galeria-text">Rorin ga rorin ga titititititititi</p>
+        </div>
+
+        <div class="galeria-container">
+            <img src="../imagenes/fondontx 2.png" alt="Descripción 3" loading="lazy">
+            <p class="galeria-text">No pregunten no hay mucho que ver aqui owo</p>
+        </div>
+
+        <div class="galeria-container">
+            <img src="../imagenes/emocion.png" alt="Descripción 3" loading="lazy">
+            <p class="galeria-text">Me gustan las estrellitas ya lo habia dicho? jaja</p>
+        </div>
+    
+        <div class="galeria-container">
+            <img src="../imagenes/auxilio.png" alt="Descripción 2" loading="lazy">
+            <p class="galeria-text">Ikanaiden't</p>
+        </div>
+
+        <div class="galeria-container">
+            <img src="../imagenes/tarea.png" alt="Descripción 3" loading="lazy">
+            <p class="galeria-text">MÁS TAREA</p>
+        </div>
+
+        <div class="galeria-container">
+            <img src="../imagenes/Q.png" alt="Descripción 3" loading="lazy">
+            <p class="galeria-text">Tareaaaaaaaaaaaa</p>
+        </div>
+
+        <div class="galeria-container">
+            <img src="../imagenes/iluminacion.png" alt="Descripción 3" loading="lazy">
+            <p class="galeria-text">Recuerdo tanto esta cosa xd</p>
+        </div>
+    </section>
+
+    <section id="len" class="texto-imagen-normal-invertido fade-in">
+        <h3><a href="#indice">☆</a></h3>
+        <h2>Mi cuaderno</h2>
+        </div>
+    </section>
+    
+    <section class="galeria fade-in">
+        <div class="galeria-container">
+            <img src="../imagenes/cuadernix1.jpeg" alt="Descripción 1" loading="lazy">
+            <p class="galeria-text">La brocheta de chayanne xd</p>
+        </div>
+
+        <div class="galeria-container">
+            <img src="../imagenes/cuadernix2.jpeg" alt="Descripción 3" loading="lazy">
+            <p class="galeria-text">PLIS NOOOOOOO</p>
+        </div>
+
+        <div class="galeria-container">
+            <img src="../imagenes/cuadernix3.jpeg" alt="Descripción 3" loading="lazy">
+            <p class="galeria-text">Que tirria me da a veces la humanidad, dios santisimo minimo finjan ser buenas personas!</p>
+        </div>
+
+        <div class="galeria-container">
+            <img src="../imagenes/cuadernix4.jpeg" alt="Descripción 3" loading="lazy">
+            <p class="galeria-text">Efectivamente...una mosca</p>
+        </div>
+
+        <div class="galeria-container">
+            <img src="../imagenes/cuadernix5.jpeg" alt="Descripción 3" loading="lazy">
+            <p class="galery-text">PLIS NO LEAN NADA DE ESTO unu</p>
+        </div>
+
+        <div class="galeria-container">
+            <img src="../imagenes/cuadernix6.jpeg" alt="Descripción 3" loading="lazy">
+            <p class="galeria-text">REPITO LO DE ARRIBA...pero muerde almohada xd</p>
+        </div>
+
+        <div class="galeria-container">
+            <img src="../imagenes/cuadernix7.jpeg" alt="Descripción 3" loading="lazy">
+            <p class="galeria-text">POR QUÉ ESTOY PONIENDO ESTOOOOOOOOO</p>
+        </div>
+
+        <div class="galeria-container">
+            <img src="../imagenes/cuadernix8.jpeg" alt="Descripción 3" loading="lazy">
+            <p class="galeria-text">Bocetitos xd</p>
+        </div>
+
+        <div class="galeria-container">
+            <img src="../imagenes/cuadernix10.jpeg" alt="Descripción 3" loading="lazy">
+            <p class="galeria-text">Más bocetitos xd</p>
+        </div>
+
+        <div class="galeria-container">
+            <img src="../imagenes/cuadernix11.jpeg" alt="Descripción 3" loading="lazy">
+            <p class="galeria-text">Y por eso aun esta el bowser en este cuaderno djcvbdsijhkvb</p>
+        </div>
+
+        <div class="galeria-container">
+            <img src="../imagenes/cuadernix12.jpeg" alt="Descripción 3" loading="lazy">
+            <p class="galeria-text">Me lastimo facil y no me doy cuenta xd hay que peeeeeeeena</p>
+        </div>
+
+        <div class="galeria-container">
+            <img src="../imagenes/cuadernix13.jpeg" alt="Descripción 3" loading="lazy">
+            <p class="galeria-text">Ya bastaaaaaa habla bien!</p>
+        </div>
+
+        <div class="galeria-container">
+            <img src="../imagenes/cuadernix14.jpeg" alt="Descripción 3" loading="lazy">
+            <p class="galeria-text">HAAAAAAAAAAAAAAAAAAAAAAAAAA</p>
+        </div>
+
+        <div class="galeria-container">
+            <img src="../imagenes/cuadernix15.jpeg" alt="Descripción 3" loading="lazy">
+            <p class="galeria-text">Pero si me lo compre xd</p>
+        </div>
+
+        <div class="galeria-container">
+            <img src="../imagenes/cuadernix16.jpeg" alt="Descripción 3" loading="lazy">
+            <p class="galeria-text">NO NO NO NO NO NO HAY NADA QUE VER AQUI SIGUE TU CAMINO AMIGO!</p>
+        </div>
+
+        <div class="galeria-container">
+            <img src="../imagenes/cuadernix17.jpeg" alt="Descripción 3" loading="lazy">
+            <p class="galeria-text">YA DIJE QUE NO</p>
+        </div>
+
+        <div class="galeria-container">
+            <img src="../imagenes/cuadernix18.jpeg" alt="Descripción 3" loading="lazy">
+            <p class="galeria-text">BASTAAAAAAAAAAAAAAA</p>
+        </div>
+
+        <div class="galeria-container">
+            <img src="../imagenes/cuadernix19.jpeg" alt="Descripción 3" loading="lazy">
+            <p class="galeria-text">HAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA x2</p>
+        </div>
+
+        <div class="galeria-container">
+            <img src="../imagenes/cuadernix20.jpeg" alt="Descripción 3" loading="lazy">
+            <p class="galeria-text">Lo mas chill que puedo enseñar si esto tiene que ser family friendly</p>
+        </div>
+
+        <div class="galeria-container">
+            <img src="../imagenes/cuadernix21.jpeg" alt="Descripción 3" loading="lazy">
+            <p class="galeria-text">Y no devolvi los bolis en como medio mes djibnsj</p>
+        </div>
+
+        <div class="galeria-container">
+            <img src="../imagenes/cuadernix22.jpeg" alt="Descripción 3" loading="lazy">
+            <p class="galeria-text">Sabian ustedes que cuando uno tiene sueño escribe bien feo? pos al parecer uno es bien honesto xd</p>
+        </div>
+
+        <div class="galeria-container">
+            <img src="../imagenes/cuadernix23.jpeg" alt="Descripción 3" loading="lazy">
+            <p class="galeria-text">El inktober que las clases nunca me dejaron terminar owo</p>
+        </div>
+
+        <div class="galeria-container">
+            <img src="../imagenes/cuadernix24.jpeg" alt="Descripción 3" loading="lazy">
+            <p class="galeria-text">reitero unu</p>
+        </div>
+
+        <div class="galeria-container">
+            <img src="../imagenes/cuadernix25.jpeg" alt="Descripción 3" loading="lazy">
+            <p class="galeria-text">mismo caso pero weeeeeeno</p>
+        </div>
+    
+        <div class="galeria-container">
+            <img src="../imagenes/cuadernix26.jpeg" alt="Descripción 2" loading="lazy">
+            <p class="galeria-text">me da pesar que la cara esta muy abajo esta como demasiado derretida la cara xd</p>
+        </div>
+
+        <div class="galeria-container">
+            <img src="../imagenes/cuadernix27.jpeg" alt="Descripción 3" loading="lazy">
+            <p class="galeria-text">Mal día</p>
+        </div>
+
+        <div class="galeria-container">
+            <img src="../imagenes/cuadernix28.jpeg" alt="Descripción 3" loading="lazy">
+            <p class="galeria-text">Hay una canción de rin que habla sobre que mata a sus amixes y entierra sus brazos en su jardin...me gusta mucho esa canción es bien adictiva xd</p>
+        </div>
+
+        <div class="galeria-container">
+            <img src="../imagenes/cuadernix29.jpeg" alt="Descripción 3" loading="lazy">
+            <p class="galeria-text">Cuando me corte el lope me llegaba al ojo xd</p>
+        </div>
+
+        <div class="galeria-container">
+            <img src="../imagenes/cuadernix30.jpeg" alt="Descripción 3" loading="lazy">
+            <p class="galeria-text">Pucho al principio odie el tinte porque parecia que estaba más bronceada unu</p>
+        </div>
+
+        <div class="galeria-container">
+            <img src="../imagenes/cuadernix31.jpeg" alt="Descripción 3" loading="lazy">
+            <p class="galeria-text">Len tiene como 10 enfermedades y 20 son terminales xd ahora...NO LO VEAN HAAAAAAAAAA</p>
+        </div>
+    </section>
+
+    <footer>
+        <div class="footer-container fade-in">
+            <div class="footer-logo">
+                <a href="#top">
+                    <img src="../imagenes/logix_provicional.png" alt="Logo" loading="lazy">
+                </a>
+            </div>
+            <nav class="footer-nav">
+                <ul>
+                    <li><a href="../biografia/biografia.html">Sobre mí</a></li>
+                    <li><a href="../diario_visual/diario_visual.html">Diario visual</a></li>
+                    <li><a href="../inspiraciones/inspiraciones.html">Ídolos</a></li>
+                    <li><a href="../pensamientos/pensamientos.html">Mi esquina</a></li>
+                    <li><a href="../obsesion/obsesion.html">Obsesiones</a></li>
+                    <li><a href="../contacto/contacto.html">Contacto</a></li>
+                </ul>
+            </nav>
+            <div class="social-icons">
+                <a href="https://soundcloud.com/uwunt_07/sets/roboss/s-Ovex5P3Q5Uc?si=c0a014be163e48d38b7b4b32767402da&utm_source=clipboard&utm_medium=text&utm_campaign=social_sharing" target="_blank">
+                    <i class="fab fa-soundcloud"></i>
+                </a>
+                <a href="https://www.youtube.com/watch?v=XvbNnvhSh3Q&list=PLu5FBTkmE3WidB_Td91utl-LHL19nygGv" target="_blank">
+                    <i class="fab fa-youtube"></i>
+                </a>
+                <a href="https://www.instagram.com/uwunt_07/" target="_blank">
+                    <i class="fab fa-instagram"></i>
+                </a>
+                <a href="https://www.tiktok.com/@uwunt_07" target="_blank">
+                    <i class="fab fa-tiktok"></i>
+                </a>
+                <a href="https://x.com/Lumi_uwunt" target="_blank">
+                    <i class="fab fa-x-twitter"></i>
+                </a>
+            </div>
+            <p class="footer-text">Todos los derechos reservados<br>Lorena Torrez © 2025</p>
+        </div>
+    </footer>
 </body>
 </html>

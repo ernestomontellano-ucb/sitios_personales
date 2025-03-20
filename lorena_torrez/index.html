@@ -1,36 +1,93 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-    <link rel="stylesheet" href="estilos/estilos.css">
+    <title>Sitio personal de Lorena</title>
+    <link href="https://fonts.googleapis.com/css2?family=Poiret+One&display=swap" rel="stylesheet"> <!-- tipografía -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"> <!-- iconos -->
+    <link rel="stylesheet" href="estilos/estilos.css"> 
+    <link rel="stylesheet" href="style.css"> <!-- estrellitas -->
     <script src="funciones/funciones.js"></script>
 </head>
 <body>
-    <header class="amarillo">
-        <h1></h1>
-        <nav>
-            <ul>
-                <li><a href=""></a></li>
-                <li><a href=""></a></li>
-                <li><a href=""></a></li>
+    <div class="container">
+        <header>
+            <div class="logo">
+                <a href="index.html">
+                    <img src="imagenes/logix_provicional.png" alt="Logo">
+                </a>
+            </div>
+            <h1><a href="../index.html">Lorena</a></h1>
+            <nav>
+                <ul>
+                    <li><a href="biografia/biografia.html">Sobre mí</a></li>
+                    <li><a href="diario_visual/diario_visual.html">Diario visual</a></li>
+                    <li><a href="inspiraciones/inspiraciones.html">Ídolos</a></li>
+                    <li><a href="pensamientos/pensamientos.html">Mi esquina</a></li>
+                    <li><a href="obsesion/obsesion.html">Obsesiones</a></li>
+                    <li><a href="contacto/contacto.html">Contacto</a></li>
+                </ul>
+            </nav>
+        </header>
+    </div>
 
-            </ul>
-        </nav>
-    </header>
+    <div class="main-container">
+        <div class="sky">
+            <div class="stars"></div>
+            <div class="comet"></div>
+            <div class="moving-stars"></div>
+            <div class="moon" id="moon"></div>
+            <div class="phrase"></div>
+        </div>
+    
+        <section class="bienvenida fade-in"> 
+            <div class="container-bienvenida">
+                <h2>Holi!</h2>
+                <p>Esta es mi primera<br>página web</p>
+                <a href="biografia/biografia.html" class="boton-bienvenida">Comenzar...</a>
+            </div>
+        </section>    
+        <footer>
+            <div class="footer-container fade-in">
+                <div class="footer-logo">
+                    <a href="#top">
+                        <img src="imagenes/logix_provicional.png" alt="Logo">
+                    </a>
+                </div>
+                <nav class="footer-nav">
+                    <ul>
+                        <li><a href="biografia/biografia.html">Sobre mí</a></li>
+                        <li><a href="diario_visual/diario_visual.html">Diario visual</a></li>
+                        <li><a href="inspiraciones/inspiraciones.html">Ídolos</a></li>
+                        <li><a href="pensamientos/pensamientos.html">Mi esquina</a></li>
+                        <li><a href="obsesion/obsesion.html">Obsesiones</a></li>
+                        <li><a href="contacto/contacto.html">Contacto</a></li>
+                    </ul>
+                </nav>
+                <div class="social-icons">
+                    <a href="https://soundcloud.com/uwunt_07/sets/roboss/s-Ovex5P3Q5Uc?si=c0a014be163e48d38b7b4b32767402da&utm_source=clipboard&utm_medium=text&utm_campaign=social_sharing" target="_blank">
+                        <i class="fab fa-soundcloud"></i>
+                    </a>
+                    <a href="https://www.youtube.com/watch?v=XvbNnvhSh3Q&list=PLu5FBTkmE3WidB_Td91utl-LHL19nygGv" target="_blank">
+                        <i class="fab fa-youtube"></i>
+                    </a>
+                    <a href="https://www.instagram.com/uwunt_07/" target="_blank">
+                        <i class="fab fa-instagram"></i>
+                    </a>
+                    <a href="https://www.tiktok.com/@uwunt_07" target="_blank">
+                        <i class="fab fa-tiktok"></i>
+                    </a>
+                    <a href="https://x.com/Lumi_uwunt" target="_blank">
+                        <i class="fab fa-x-twitter"></i>
+                    </a>
+                </div>
+                <p class="footer-text">Todos los derechos reservados<br>Lorena Torrez</p>
+            </div>
+        </footer>
+    </div>
 
-
-
-
-
-    <li><a href="biografia/biografia.html">Sobre mi</a></li>
-    <li><a href="diario_visual/diario_visual.html">Diario visual</a></li>
-    <li><a href="inspiraciones/inspiraciones.html">Idolos</a></li>
-    <li><a href="anime/anime.html">Recomendaciones</a></li>
-    <li><a href="pensamientos/pensamientos.html">Mi esquina</a></li>
-    <li><a href="vocaloid/vocaloid.html">Vocaloid</a></li>
-    <li><a href="obsesion/obsesion.html">Obsesiones</a></li>
-    <li><a href="contacto/contacto.html">Contacto</a></li>
+    <script src="main.js"></script> <!-- Script del cielo interactivo -->
+    </script>
 </body>
 </html>
