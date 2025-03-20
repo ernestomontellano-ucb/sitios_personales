@@ -1,0 +1,64 @@
+
+body{
+    font-family: "Space Grotesk", sans-serif;
+    background-color: whitesmoke;
+}
+
+.contendor{
+    background-image: url('imagen/fondo.JPG');
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-attachment: fixed;
+}
+
+.imagen{
+    padding: 20px;
+    width: 200px;
+    height: 200px;
+
+}
+
+header {
+    background-color: #c76b29;
+    padding: 0%;
+}
+
+header nav {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+
+}
+
+body header nav a{
+    color: white;
+    text-decoration: none;
+    font-size: 16px;
+}
+
+body header nav a h1{
+    color: white;
+    text-decoration: none;
+    font-size: 40px;
+}
+
+footer{
+    background-color: #c76b29;
+    padding: 15px 0;
+    margin-top: 40px;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+}
+
+footer  nav a img {
+    
+    color: white;
+    text-decoration: none;  
+    margin: 0 30px;
+
+}
