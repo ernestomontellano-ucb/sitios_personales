@@ -3,12 +3,13 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fernando Catacora-Contacto</title>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Lexend:wght@100..900&family=Montserrat:ital,wght@0,100..900;1,100..900&family=Mulish:ital,wght@0,200..1000;1,200..1000&family=Nunito+Sans:ital,opsz,wght@0,6..12,200..1000;1,6..12,200..1000&family=Open+Sans:ital,wght@0,300..800;1,300..800&family=Outfit:wght@100..900&family=Quicksand:wght@300..700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="estilos/estilos.css">
     <link rel="shortcut icon" href="recursos/Logo/logo1.png"> <!--logo-->
-    <title>Fernando Catacora-Inicio</title>
+
 </head>
 <body>
     <!--Cabezera-->
@@ -38,29 +39,57 @@
             </nav>
         </nav>  
     </header>
-    <!--banner inicio-->
-    <section class="banner-inicio">
+    <!--banner-->
+    <section class="banner">
         <div class="text">
-            <h1>Bienvenido</h1>
+            <h1>Contáctame</h1>
+            <p>Contactame llenando los campos</p>
         </div>
     </section>
-    <!--Contenido Princiapal-->
-    <main class="inicio">
-        <div class="cont-inicio1">
-            <img src="recursos/fotos_mias/pensar.jpeg" alt="yo">
+    <!--Formulario-->
+    <section class="container-form">
+        <form action="action"  class="formulario" id="formulario1">
+            <div class="form-1">
+                <div class="info">
+                    <label for="">Nombre</label>
+                    <input type="text" placeholder="tu nombre" id="nombre">
+                </div>
+                <div class="info">
+                    <label for="">Teléfono</label>
+                    <input type="tel" placeholder="tu teléfono" id="telefono">
+                </div>
+                <div class="info2 info">
+                    <label for="">Tu correo</label>
+                    <input type="email" placeholder="tu correo" id="correo">
+                </div>
+                <div class="info-mensaje">
+                    <label for="">Tu mensaje</label>
+                    <textarea name="" id="mensaje">
+                    </textarea>
+                </div>
+                <button>Enviar</button>
+            </div>
+              
+        </form>  
+    </section>
+    <!--Alertas-->
+    <section class="containerA">
+        <div class="alertas-s hide" id="a-s">
+            <h4>Mensaje enviado</h4>
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" width="28" height="28" stroke-width="1.75">
+                <path d="M12 12m-9 0a9 9 0 1 0 18 0a9 9 0 1 0 -18 0"></path>
+                <path d="M9 12l2 2l4 -4"></path>
+              </svg>
         </div>
-        <div class="conta-inicio">
-            <h1>Hola soy Fernando Catacora</h1>
-            <p>
-                Aquí encontrarás un espacio donde comparto mis pasiones y experiencias diarias. Soy estudiante de Diseño Digital, creador de contenido y un gran fan de los videojuegos. Me encanta explorar el mundo del diseño, la animación y la edición de videos, siempre buscando nuevas formas de mejorar mis habilidades y hacer contenido visualmente atractivo.
-
-                 Entre clases y proyectos, dedico mi tiempo a editar videos para mi canal de YouTube, experimentando con efectos, transiciones y estilos creativos. Además, en mis momentos de descanso, disfruto sumergiéndome en videojuegos como FC24, GTA V o Poppy Playtime, donde encuentro inspiración y entretenimiento. También me apasiona la tecnología y el mundo digital, siempre explorando nuevas herramientas para potenciar mis creaciones.
-
-                Si compartes mis intereses o simplemente quieres conocer más sobre lo que hago, ¡explora mi web y úneta esta aventura digital! 
-            </p>
+        <div class="alertas-f hide" id="a-f">
+            <h4>Error: por favor llena todos los capos</h4>
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" width="28" height="28" stroke-width="1.75">
+                <path d="M12 12m-9 0a9 9 0 1 0 18 0a9 9 0 1 0 -18 0"></path>
+                <path d="M12 9v4"></path>
+                <path d="M12 16v.01"></path>
+              </svg>
         </div>
-    </main>
-    <!--Footer-->
+    </section>
     <footer>
         <div class="icon-container">
             <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" width="32" height="32" stroke-width="1.75">
@@ -81,6 +110,7 @@
         </div>
         <h3>©Copyright. Todos los derechos reservados 2023</h3>
     </footer>
+
     <!--script-->
     <script src="script/funciones.js" ></script>
 </body>
